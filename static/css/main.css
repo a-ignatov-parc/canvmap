@@ -1,0 +1,15 @@
+.b-map {
+	width: 800px;
+	margin: 0 auto;
+	position: relative;
+}
+.b-map.b-active_zone {
+	cursor: pointer;
+}
+
+.b-map_zones {
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: none;
+}
