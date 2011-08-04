@@ -199,26 +199,38 @@ Map.prototype = {
 	},
 
 	createCanvasesList: function(list, map) {
-		var canvases = [];
+		var hasCanvases = !!this.canvases[this.currentLevel.length - 1],
+			canvases = [];
 
 		map = $(map);
 		$(list).each(function(i, item) {
-			var canvas = document.createElement('canvas'),
-				ctx = canvas.getContext('2d'),
-				image = $('<img>').appendTo(map.parent());
-
-			canvas.width = map[0].width;
-			canvas.height = map[0].height;
-			image.addClass('b-map_zones');
-			item.domEl = image;
-
-			this.loadImg(image, item.fileName, function(event) {
-				ctx.drawImage(event.target, 0, 0);
-			}, 'rendered');
-
-			canvases.push(ctx);
+			if (!hasCanvases) {
+				var canvas = document.createElement('canvas'),
+					ctx = canvas.getContext('2d'),
+					image = $('<img>').appendTo(map.parent());
+	
+				canvas.width = map[0].width;
+				canvas.height = map[0].height;
+				image.addClass('b-map_zones');
+				item.domEl = image;
+	
+				this.loadImg(image, item.fileName, function(event) {
+					ctx.drawImage(event.target, 0, 0);
+				}, 'rendered');
+	
+				canvases.push(ctx);
+			} else {
+				map
+					.parent()
+					.append(item.domEl);
+			}
 		}.bind(this));
-		this.canvases[this.currentLevel.length - 1] = canvases;
+
+		if (!hasCanvases) {
+			this.canvases[this.currentLevel.length - 1] = canvases;
+		} else {
+			AWAD.Observatory.trigger('canvmap.rendered');
+		}
 	},
 
 	clearCanvasesList: function() {
@@ -230,6 +242,7 @@ Map.prototype = {
 			hasActiveZone = false;
 
 		mapEl
+			.unbind()
 			.bind('mousemove.canvmap click.canvmap', function(event) {
 				var index = null;
 
@@ -259,20 +272,34 @@ Map.prototype = {
 				if (hasActiveZone) {
 					hasActiveZone = false;
 				} else {
+					if (event.type == 'click') {
+						this.zoomOut();
+					}
 					this.checkZone();
 				}
 			}.bind(this));
 	},
 
-	/*getActiveZoneID: function() {
-		for (var i = 0, length = this.zonesList.length; i < length; i++) {
-			var zone = this.zonesList[i];
+	zoomOut: function() {
+		if (this.currentLevel.length - 1) {
+			var zone = this.getLevelRoot(),
+				parent;
+				
+			this.currentLevel.length = this.currentLevel.length - 1;
+			parent = this.getLevelRoot();
 
-			if (zone.active) {
-				return i;
-			}
+			var parentMap = $(parent.mapImg),
+				zoneMap = $(zone.mapImg);
+
+			this.clearCanvasesList();
+			parentMap.animate(zone.animations.reset, 200);
+			zoneMap
+				.animate(zone.animations.zone, 200, function() {
+					zoneMap.remove();
+					this.onReady(this.mapEl.find('.b-map-content'));
+				}.bind(this));
 		}
-	},*/
+	},
 
 	checkZone: function(index) {
 		$(this.currentLevelRoot.zones).each(function(i, zone) {
