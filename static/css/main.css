@@ -1,9 +1,20 @@
 .b-map {
 	width: 800px;
+	height: 320px;
 	margin: 0 auto;
 	position: relative;
+	overflow: hidden;
 }
-.b-map.b-active_zone {
+.b-map.b-loading_map {
+	background: url(../img/b-map_loader.gif) 50% no-repeat;
+}
+
+.b-map-content {
+	height: 100%;
+	background: url(../img/map/_background.png) no-repeat;
+	display: none;
+}
+.b-map-content.b-active_zone {
 	cursor: pointer;
 }
 
@@ -12,4 +23,13 @@
 	left: 0;
 	position: absolute;
 	display: none;
+}
+.b-map.animating .b-map_zones {
+	display: none !important;
+}
+
+.b-map-content_map {
+	top: 0;
+	left: 0;
+	position: absolute;
 }

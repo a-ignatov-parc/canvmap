@@ -14,12 +14,112 @@
 		<script type="text/javascript" src="static/js/libs/jquery-1.5.2.min.js"></script>
 		<script type="text/javascript" src="static/js/libs/json2.js"></script>
 		<script type="text/javascript" src="static/js/libs/underscore-min.js"></script>
+		<script type="text/javascript" src="static/js/config.js"></script>
+		<script type="text/javascript" src="static/js/system.js"></script>
+
 		<script type="text/javascript" src="static/js/main.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var canvmap = new Map(),
+					map = canvmap.createLevel({
+						root: Config.web.img_host + 'map/'
+					});
+
+				/* Africa */
+				var africa = map.registerZone({
+						name: 'Africa',
+						fileName: 'africa.png'
+					});
+				/* Africa */
+
+				/* Asia */
+				var asia = map.registerZone({
+						name: 'Asia',
+						fileName: 'asia.png',
+						animations: {
+							active: {
+								top: -210,
+								left: -642,
+								width: 1856,
+								height: 743,
+								opacity: 0
+							},
+							zone: {
+								top: 91,
+								left: 278,
+								width: 344,
+								height: 137
+							}
+						},
+					}),
+					map_asia = asia.createLevel({
+						root: asia.root + 'asia/'
+					});
+
+					var armenia = map_asia.registerZone({
+						name: 'Armenia',
+						fileName: 'asia-1-armenia.png'
+					});
+					var azerbaijan = map_asia.registerZone({
+						name: 'Azerbaijan',
+						fileName: 'asia-1-azerbaijan.png'
+					});
+					var georgia = map_asia.registerZone({
+						name: 'Georgia',
+						fileName: 'asia-1-georgia.png'
+					});
+					var iran = map_asia.registerZone({
+						name: 'Iran',
+						fileName: 'asia-1-iran.png'
+					});
+					var kazakhstan = map_asia.registerZone({
+						name: 'Kazakhstan',
+						fileName: 'asia-1-kazakhstan.png'
+					});
+					var russia = map_asia.registerZone({
+						name: 'Russia',
+						fileName: 'asia-1-russia.png'
+					});
+				/* Asia */
+
+				/* Australia-Oceania */
+				var australia = map.registerZone({
+						name: 'Australia-Oceania',
+						fileName: 'australia-oceania.png'
+					});
+				/* Australia-Oceania */
+
+				/* Europe */
+				var europa = map.registerZone({
+						name: 'Europe',
+						fileName: 'europe.png'
+					});
+				/* Europe */
+
+				/* North America */
+				var north_america = map.registerZone({
+						name: 'North America',
+						fileName: 'north-america.png'
+					});
+				/* North America */
+
+				/* South America */
+				var south_america = map.registerZone({
+						name: 'South America',
+						fileName: 'south-america.png'
+					});
+				/* South America */
+
+				canvmap.draw($('body'));
+			});
+		</script>
 </head>
 <body>
 	<!-- Templates -->
 	<script type="text/template" id="canvas-map">
-		<div class="b-map"></div>
+		<div class="b-map">
+			<div class="b-map-content"></div>
+		</div>
 	</script>
 	<!-- Templates -->
 </body>
