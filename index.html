@@ -50,7 +50,7 @@
 								width: 344,
 								height: 137
 							}
-						},
+						}
 					}),
 					map_asia = asia.createLevel({
 						root: asia.root + 'asia/'
@@ -73,9 +73,28 @@
 						fileName: 'asia-1-iran.png'
 					});
 					var kazakhstan = map_asia.registerZone({
-						name: 'Kazakhstan',
-						fileName: 'asia-1-kazakhstan.png'
-					});
+							name: 'Kazakhstan',
+							fileName: 'asia-1-kazakhstan.png',
+							animations: {
+								active: {
+									top: -210,
+									left: -642,
+									width: 1856,
+									height: 743,
+									opacity: 0
+								},
+								zone: {
+									top: 91,
+									left: 278,
+									width: 344,
+									height: 137
+								}
+							}
+						}),
+						map_kazakhstan = kazakhstan.createLevel({
+							root: kazakhstan.root + 'kazakhstan/'
+						});
+
 					var russia = map_asia.registerZone({
 						name: 'Russia',
 						fileName: 'asia-1-russia.png'

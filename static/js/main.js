@@ -82,6 +82,7 @@ Map.prototype = {
 						.animate(this.zone.animations.reset, 100);
 					activeMap
 						.animate(this.zone.animations.active, 200, function() {
+							activeMap.hide();
 							this.onReady(this.mapEl.find('.b-map-content'));
 						}.bind(this.context));
 				}
@@ -190,11 +191,14 @@ Map.prototype = {
 	getLevelRoot: function(zoneList, currentLevel, subLevel) {
 		zoneList = zoneList || this.map.zones;
 		currentLevel = currentLevel || this.currentLevel;
+		currentLevel = currentLevel.slice(1);
 
-		if (currentLevel.length == 1) {
-			return subLevel ? zoneList[currentLevel[0]] : this.map;
+		if (!currentLevel.length) {
+			return this.map;
+		} else if (currentLevel.length == 1) {
+			return zoneList[currentLevel[0]];
 		} else if (currentLevel.length > 1) {
-			return this.getLevelRoot(zoneList, currentLevel.slice(1), true);
+			return this.getLevelRoot(zoneList[currentLevel[0]].zones, currentLevel, true);
 		}
 	},
 
@@ -292,7 +296,9 @@ Map.prototype = {
 				zoneMap = $(zone.mapImg);
 
 			this.clearCanvasesList();
-			parentMap.animate(zone.animations.reset, 200);
+			parentMap
+				.show()
+				.animate(zone.animations.reset, 200);
 			zoneMap
 				.animate(zone.animations.zone, 200, function() {
 					zoneMap.remove();
