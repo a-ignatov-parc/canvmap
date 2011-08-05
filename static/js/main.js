@@ -18,7 +18,12 @@ Map.prototype = {
 		map: {
 			root: null,
 			mapImg: null,
-			zones: []
+			zones: [],
+			gmapShift: {
+				lat: 0,
+				lng: 0
+			},
+			gmapZoom: 0
 		},
 		zone: {
 			active: false,
@@ -102,7 +107,7 @@ Map.prototype = {
 		var mapImg = new Image();
 
 		$.extend(true, this.zone, this.context.tpl.map);
-		this.zone.root = params.root;
+		$.extend(true, this.zone, params);
 
 		mapImg.className = 'b-map-content_map';
 		this.zone.mapImg = mapImg;
@@ -167,7 +172,9 @@ Map.prototype = {
 				this.onReady(mapContent);
 			}.bind(this))
 			.bind('canvmap.rendered', function() {
-				mapEl.removeClass('b-loading_map');
+				mapEl
+					.addClass('b-small_loader')
+					.removeClass('b-loading_map');
 				mapContent.fadeIn();
 				this.setListeners(mapContent);
 			}.bind(this));
@@ -297,6 +304,7 @@ Map.prototype = {
 		var zone = this.currentLevelRoot,
 			gmapContainer = $('.b-map-gmap'),
 			gmapGeocoder = this.gmapGeocoder = new google.maps.Geocoder(),
+			gmapZoom = $('.b-map-gmap-zoom', this.mapEl),
 			gmap;
 
 		this.mapEl.addClass('b-loading_map');
@@ -306,12 +314,37 @@ Map.prototype = {
 			this.mapEl.removeClass('b-loading_map');
 
 			if (status == google.maps.GeocoderStatus.OK) {
-				gmapContainer.show();
+				var location = results[0].geometry.location;
+
+				gmapContainer.fadeIn('fast');
 				gmap = this.gmap = new google.maps.Map(gmapContainer[0], {
-					zoom: 4,
-					center: results[0].geometry.location,
+					zoom: zone.gmapZoom,
+					minZoom: zone.gmapZoom,
+					disableDefaultUI: true,
+					draggable: false,
+					center: new google.maps.LatLng(location.lat() + zone.gmapShift.lat, location.lng() + zone.gmapShift.lng),
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				});
+				gmapZoom
+					.show()
+					.undelegate()
+					.delegate('.b-map-gmap-zoom_in', 'click', function(event) {
+						gmap.setZoom(gmap.getZoom() + 1);
+						return false;
+					})
+					.delegate('.b-map-gmap-zoom_out', 'click', function(event) {
+						var prevLvl = gmap.getZoom();
+
+						gmap.setZoom(gmap.getZoom() - 1);
+
+						if (gmap.getZoom() == prevLvl) {
+							gmapZoom.hide();
+							gmapContainer.fadeOut('fast', function() {
+								this.zoomOut();
+							}.bind(this));
+						}
+						return false;
+					}.bind(this))
 			}
 		}.bind(this));
 	},

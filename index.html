@@ -95,7 +95,12 @@
 							}
 						}),
 						map_kazakhstan = kazakhstan.createLevel({
-							root: kazakhstan.root + 'kazakhstan/'
+							root: kazakhstan.root + 'kazakhstan/',
+							gmapShift: {
+								lat: -1,
+								lng: 10
+							},
+							gmapZoom: 4
 						});
 
 					var russia = map_asia.registerZone({
@@ -143,6 +148,10 @@
 			<div class="b-map-content"></div>
 			<div class="b-map-gmap"></div>
 			<i class="b-map-preloader"></i>
+			<i class="b-map-gmap-zoom">
+				<span class="b-map-gmap-zoom_in"></span>
+				<span class="b-map-gmap-zoom_out"></span>
+			</i>
 		</div>
 	</script>
 	<!-- Templates -->
