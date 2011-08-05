@@ -5,8 +5,19 @@
 	position: relative;
 	overflow: hidden;
 }
-.b-map.b-loading_map {
+.b-map-preloader {
+	top: 50%;
+	left: 50%;
+	width: 32px;
+	height: 32px;
 	background: url(../img/b-map_loader.gif) 50% no-repeat;
+	margin: -16px 0 0 -16px;
+	position: absolute;
+	z-index: 1;
+	display: none;
+}
+.b-map.b-loading_map .b-map-preloader {
+	display: block;
 }
 
 .b-map-content {
@@ -28,8 +39,15 @@
 	display: none !important;
 }
 
+.b-map-gmap,
 .b-map-content_map {
 	top: 0;
 	left: 0;
 	position: absolute;
+}
+.b-map-gmap {
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: transparent !important;
 }

@@ -11,6 +11,8 @@ var Map = function() {
 
 Map.prototype = {
 	map: {},
+	gmap: null,
+	gmapGeocoder: null,
 	mapEl: null,
 	tpl: {
 		map: {
@@ -154,7 +156,7 @@ Map.prototype = {
 
 	draw: function(container) {
 		var template = $('#canvas-map'),
-			mapEl = $(_.template(template.html())()),
+			mapEl = this.mapEl = $(_.template(template.html())()),
 			mapContent = mapEl.find('.b-map-content');
 
 		mapEl
@@ -169,7 +171,6 @@ Map.prototype = {
 				mapContent.fadeIn();
 				this.setListeners(mapContent);
 			}.bind(this));
-		this.mapEl = mapEl;
 	},
 
 	onReady: function(container) {
@@ -212,6 +213,8 @@ Map.prototype = {
 				var canvas = document.createElement('canvas'),
 					ctx = canvas.getContext('2d'),
 					image = $('<img>').appendTo(map.parent());
+
+				this.mapEl.addClass('b-loading_map');
 	
 				canvas.width = map[0].width;
 				canvas.height = map[0].height;
@@ -232,7 +235,9 @@ Map.prototype = {
 
 		if (!hasCanvases) {
 			this.canvases[this.currentLevel.length - 1] = canvases;
-		} else {
+		}
+
+		if (!list.length || hasCanvases) {
 			AWAD.Observatory.trigger('canvmap.rendered');
 		}
 	},
@@ -282,6 +287,33 @@ Map.prototype = {
 					this.checkZone();
 				}
 			}.bind(this));
+
+		if (!this.canvases[this.currentLevel.length - 1].length) {
+			this.loadGMap();
+		}
+	},
+
+	loadGMap: function() {
+		var zone = this.currentLevelRoot,
+			gmapContainer = $('.b-map-gmap'),
+			gmapGeocoder = this.gmapGeocoder = new google.maps.Geocoder(),
+			gmap;
+
+		this.mapEl.addClass('b-loading_map');
+		gmapGeocoder.geocode({
+			address: zone.name
+		}, function(results, status) {
+			this.mapEl.removeClass('b-loading_map');
+
+			if (status == google.maps.GeocoderStatus.OK) {
+				gmapContainer.show();
+				gmap = this.gmap = new google.maps.Map(gmapContainer[0], {
+					zoom: 4,
+					center: results[0].geometry.location,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				});
+			}
+		}.bind(this));
 	},
 
 	zoomOut: function() {
