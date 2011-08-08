@@ -314,15 +314,17 @@ Map.prototype = {
 			this.mapEl.removeClass('b-loading_map');
 
 			if (status == google.maps.GeocoderStatus.OK) {
-				var location = results[0].geometry.location;
+				var location = results[0].geometry.location
+					centerLatLng = new google.maps.LatLng(location.lat() + zone.gmapShift.lat, location.lng() + zone.gmapShift.lng);
 
 				gmapContainer.fadeIn('fast');
 				gmap = this.gmap = new google.maps.Map(gmapContainer[0], {
 					zoom: zone.gmapZoom,
 					minZoom: zone.gmapZoom,
 					disableDefaultUI: true,
-					draggable: false,
-					center: new google.maps.LatLng(location.lat() + zone.gmapShift.lat, location.lng() + zone.gmapShift.lng),
+					disableDoubleClickZoom: true,
+					scrollwheel: false,
+					center: centerLatLng,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				});
 				gmapZoom
@@ -338,6 +340,7 @@ Map.prototype = {
 						gmap.setZoom(gmap.getZoom() - 1);
 
 						if (gmap.getZoom() == prevLvl) {
+							gmap.setCenter(centerLatLng);
 							gmapZoom.hide();
 							gmapContainer.fadeOut('fast', function() {
 								this.zoomOut();
