@@ -60,21 +60,97 @@
 					});
 
 					var armenia = map_asia.registerZone({
-						name: 'Armenia',
-						fileName: 'asia-1-armenia.png'
-					});
+							name: 'Armenia',
+							fileName: 'asia-1-armenia.png',
+							animations: {
+								active: {
+									top: -175,
+									left: -248,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 58,
+									left: 82,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_armenia = armenia.createLevel({
+							root: armenia.root + 'armenia/'
+						});
+
 					var azerbaijan = map_asia.registerZone({
-						name: 'Azerbaijan',
-						fileName: 'asia-1-azerbaijan.png'
-					});
+							name: 'Azerbaijan',
+							fileName: 'asia-1-azerbaijan.png',
+							animations: {
+								active: {
+									top: -175,
+									left: -304,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 62,
+									left: 108,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_azerbaijan = azerbaijan.createLevel({
+							root: azerbaijan.root + 'azerbaijan/'
+						});
+
 					var georgia = map_asia.registerZone({
-						name: 'Georgia',
-						fileName: 'asia-1-georgia.png'
-					});
+							name: 'Georgia',
+							fileName: 'asia-1-georgia.png',
+							animations: {
+								active: {
+									top: -93,
+									left: -229,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 38,
+									left: 77,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_georgia = georgia.createLevel({
+							root: georgia.root + 'georgia/'
+						});
+
 					var iran = map_asia.registerZone({
-						name: 'Iran',
-						fileName: 'asia-1-iran.png'
-					});
+							name: 'Iran',
+							fileName: 'asia-1-iran.png',
+							animations: {
+								active: {
+									top: -262,
+									left: -340,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 92,
+									left: 119,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_iran = iran.createLevel({
+							root: iran.root + 'iran/'
+						});
+
 					var kazakhstan = map_asia.registerZone({
 							name: 'Kazakhstan',
 							fileName: 'asia-1-kazakhstan.png',
@@ -104,9 +180,955 @@
 						});
 
 					var russia = map_asia.registerZone({
-						name: 'Russia',
-						fileName: 'asia-1-russia.png'
-					});
+							name: 'Russia',
+							fileName: 'asia-1-russia.png',
+							animations: {
+								active: {
+									top: 0,
+									left: -578,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 0,
+									left: 211,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_russia = russia.createLevel({
+							root: russia.root + 'russia/'
+						});
+
+					var turkey = map_asia.registerZone({
+							name: 'Turkey',
+							fileName: 'asia-1-turkey.png',
+							animations: {
+								active: {
+									top: -175,
+									left: -159,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 66,
+									left: 56,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_turkey = turkey.createLevel({
+							root: turkey.root + 'turkey/'
+						});
+
+					var turkmenistan = map_asia.registerZone({
+							name: 'Turkmenistan',
+							fileName: 'asia-1-turkmenistan.png',
+							animations: {
+								active: {
+									top: -203,
+									left: -450,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 65,
+									left: 145,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_turkmenistan = turkmenistan.createLevel({
+							root: turkmenistan.root + 'turkmenistan/'
+						});
+
+					var china = map_asia.registerZone({
+							name: 'China',
+							fileName: 'asia-2-china.png',
+							animations: {
+								active: {
+									top: -245,
+									left: -952,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 89,
+									left: 313,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_china = china.createLevel({
+							root: china.root + 'china/'
+						});
+
+					var kyrgyzstan = map_asia.registerZone({
+							name: 'Kyrgyzstan',
+							fileName: 'asia-2-kyrgyzstan.png',
+							animations: {
+								active: {
+									top: -154,
+									left: -577,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 58,
+									left: 188,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_kyrgyzstan = kyrgyzstan.createLevel({
+							root: kyrgyzstan.root + 'kyrgyzstan/'
+						});
+
+					var mongolia = map_asia.registerZone({
+							name: 'Mongolia',
+							fileName: 'asia-2-mongolia.png',
+							animations: {
+								active: {
+									top: -51,
+									left: -891,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 24,
+									left: 299,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_mongolia = mongolia.createLevel({
+							root: mongolia.root + 'mongolia/'
+						});
+
+					var tajikistan = map_asia.registerZone({
+							name: 'Tajikistan',
+							fileName: 'asia-2-tajikistan.png',
+							animations: {
+								active: {
+									top: -183,
+									left: -530,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 63,
+									left: 179,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_tajikistan = tajikistan.createLevel({
+							root: tajikistan.root + 'tajikistan/'
+						});
+
+					var uzbekistan = map_asia.registerZone({
+							name: 'Uzbekistan',
+							fileName: 'asia-2-uzbekistan.png',
+							animations: {
+								active: {
+									top: -143,
+									left: -460,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 48,
+									left: 154,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_uzbekistan = uzbekistan.createLevel({
+							root: uzbekistan.root + 'uzbekistan/'
+						});
+
+					var japan = map_asia.registerZone({
+							name: 'Japan',
+							fileName: 'asia-3-japan.png',
+							animations: {
+								active: {
+									top: -234,
+									left: -1261,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 79,
+									left: 418,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_japan = japan.createLevel({
+							root: japan.root + 'japan/'
+						});
+
+					var kuwait = map_asia.registerZone({
+							name: 'Kuwait',
+							fileName: 'asia-3-kuwait.png',
+							animations: {
+								active: {
+									top: -316,
+									left: -240,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 101,
+									left: 85,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_kuwait = kuwait.createLevel({
+							root: kuwait.root + 'kuwait/'
+						});
+
+					var north_korea = map_asia.registerZone({
+							name: 'North Korea',
+							fileName: 'asia-3-north-korea.png',
+							animations: {
+								active: {
+									top: -162,
+									left: -1197,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 56,
+									left: 398,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_north_korea = north_korea.createLevel({
+							root: north_korea.root + 'north-korea/'
+						});
+
+					var cyprus = map_asia.registerZone({
+							name: 'Cyprus',
+							fileName: 'asia-5-cyprus.png',
+							animations: {
+								active: {
+									top: -204,
+									left: -123,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 74,
+									left: 48,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_cyprus = cyprus.createLevel({
+							root: cyprus.root + 'cyprus/'
+						});
+
+					var iraq = map_asia.registerZone({
+							name: 'Iraq',
+							fileName: 'asia-5-iraq.png',
+							animations: {
+								active: {
+									top: -250,
+									left: -220,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 86,
+									left: 80,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_iraq = iraq.createLevel({
+							root: iraq.root + 'iraq/'
+						});
+
+					var israel = map_asia.registerZone({
+							name: 'Israel',
+							fileName: 'asia-5-israel.png',
+							animations: {
+								active: {
+									top: -273,
+									left: -132,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 95,
+									left: 55,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_israel = israel.createLevel({
+							root: israel.root + 'israel/'
+						});
+
+					var jordan = map_asia.registerZone({
+							name: 'Jordan',
+							fileName: 'asia-5-jordan.png',
+							animations: {
+								active: {
+									top: -273,
+									left: -132,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 95,
+									left: 55,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_jordan = jordan.createLevel({
+							root: jordan.root + 'jordan/'
+						});
+
+					var lebanon = map_asia.registerZone({
+							name: 'Lebanon',
+							fileName: 'asia-5-lebanon.png',
+							animations: {
+								active: {
+									top: -273,
+									left: -132,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 95,
+									left: 55,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_lebanon = lebanon.createLevel({
+							root: lebanon.root + 'lebanon/'
+						});
+
+					var oman = map_asia.registerZone({
+							name: 'Oman',
+							fileName: 'asia-5-oman.png',
+							animations: {
+								active: {
+									top: -388,
+									left: -336,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 135,
+									left: 117,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_oman = oman.createLevel({
+							root: oman.root + 'oman/'
+						});
+
+					var qatar = map_asia.registerZone({
+							name: 'Qatar',
+							fileName: 'asia-5-qatar.png',
+							animations: {
+								active: {
+									top: -388,
+									left: -336,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 135,
+									left: 117,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_qatar = qatar.createLevel({
+							root: qatar.root + 'qatar/'
+						});
+
+					var saudi_arabia = map_asia.registerZone({
+							name: 'Saudi Arabia',
+							fileName: 'asia-5-saudi-arabia.png',
+							animations: {
+								active: {
+									top: -388,
+									left: -248,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 127,
+									left: 90,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_saudi_arabia = saudi_arabia.createLevel({
+							root: saudi_arabia.root + 'saudi-arabia/'
+						});
+
+					var syria = map_asia.registerZone({
+							name: 'Syria',
+							fileName: 'asia-5-syria.png',
+							animations: {
+								active: {
+									top: -245,
+									left: -170,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 85,
+									left: 63,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_syria = syria.createLevel({
+							root: syria.root + 'syria/'
+						});
+
+					var uae = map_asia.registerZone({
+							name: 'UAE',
+							fileName: 'asia-5-UAE.png',
+							animations: {
+								active: {
+									top: -388,
+									left: -248,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 127,
+									left: 90,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_uae = uae.createLevel({
+							root: uae.root + 'uae/'
+						});
+
+					var yemen = map_asia.registerZone({
+							name: 'Yemen',
+							fileName: 'asia-5-yemen.png',
+							animations: {
+								active: {
+									top: -388,
+									left: -248,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 127,
+									left: 90,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_yemen = yemen.createLevel({
+							root: yemen.root + 'yemen/'
+						});
+
+					var afghanistan = map_asia.registerZone({
+							name: 'Afghanistan',
+							fileName: 'asia-6-afghanistan.png',
+							animations: {
+								active: {
+									top: -245,
+									left: -509,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 85,
+									left: 177,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_afghanistan = afghanistan.createLevel({
+							root: afghanistan.root + 'afghanistan/'
+						});
+
+					var bangladesh = map_asia.registerZone({
+							name: 'Bangladesh',
+							fileName: 'asia-6-bangladesh.png',
+							animations: {
+								active: {
+									top: -391,
+									left: -732,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 129,
+									left: 241,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_bangladesh = bangladesh.createLevel({
+							root: bangladesh.root + 'bangladesh/'
+						});
+
+					var bhutan = map_asia.registerZone({
+							name: 'Bhutan',
+							fileName: 'asia-6-bhutan.png',
+							animations: {
+								active: {
+									top: -391,
+									left: -732,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 129,
+									left: 241,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_bhutann = bhutan.createLevel({
+							root: bhutan.root + 'bhutan/'
+						});
+
+					var cambodia = map_asia.registerZone({
+							name: 'Cambodia',
+							fileName: 'asia-6-cambodia.png',
+							animations: {
+								active: {
+									top: -521,
+									left: -931,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 174,
+									left: 310,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_cambodia = cambodia.createLevel({
+							root: cambodia.root + 'cambodia/'
+						});
+
+					var india = map_asia.registerZone({
+							name: 'India',
+							fileName: 'asia-6-india.png',
+							animations: {
+								active: {
+									top: -408,
+									left: -634,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 137,
+									left: 216,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_india = india.createLevel({
+							root: india.root + 'india/'
+						});
+
+					var laos = map_asia.registerZone({
+							name: 'Laos',
+							fileName: 'asia-6-laos.png',
+							animations: {
+								active: {
+									top: -468,
+									left: -898,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 160,
+									left: 297,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_laos = laos.createLevel({
+							root: laos.root + 'laos/'
+						});
+
+					var myanmar = map_asia.registerZone({
+							name: 'Myanmar',
+							fileName: 'asia-6-myanmar.png',
+							animations: {
+								active: {
+									top: -468,
+									left: -898,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 160,
+									left: 297,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_myanmar = myanmar.createLevel({
+							root: myanmar.root + 'myanmar/'
+						});
+
+					var nepal = map_asia.registerZone({
+							name: 'Nepal',
+							fileName: 'asia-6-nepal.png',
+							animations: {
+								active: {
+									top: -308,
+									left: -685,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 105,
+									left: 229,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_nepaln = nepal.createLevel({
+							root: nepal.root + 'nepal/'
+						});
+
+					var pakistan = map_asia.registerZone({
+							name: 'Pakistan',
+							fileName: 'asia-6-pakistan.png',
+							animations: {
+								active: {
+									top: -297,
+									left: -502,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 105,
+									left: 175,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_pakistan = pakistan.createLevel({
+							root: pakistan.root + 'pakistan/'
+						});
+
+					var thailand = map_asia.registerZone({
+							name: 'Thailand',
+							fileName: 'asia-6-thailand.png',
+							animations: {
+								active: {
+									top: -468,
+									left: -898,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 160,
+									left: 297,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_thailand = thailand.createLevel({
+							root: thailand.root + 'thailand/'
+						});
+
+					var bangladesh = map_asia.registerZone({
+							name: 'Bangladesh',
+							fileName: 'asia-6-bangladesh.png',
+							animations: {
+								active: {
+									top: -308,
+									left: -685,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 105,
+									left: 229,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_bangladesh = bangladesh.createLevel({
+							root: bangladesh.root + 'bangladesh/'
+						});
+
+					var vietnam = map_asia.registerZone({
+							name: 'Vietnam',
+							fileName: 'asia-6-vietnam.png',
+							animations: {
+								active: {
+									top: -468,
+									left: -898,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 160,
+									left: 297,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_vietnam = vietnam.createLevel({
+							root: vietnam.root + 'vietnam/'
+						});
+
+					var philippines = map_asia.registerZone({
+							name: 'Philippines',
+							fileName: 'asia-7-philippines.png',
+							animations: {
+								active: {
+									top: -468,
+									left: -898,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 168,
+									left: 341,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_philippines = philippines.createLevel({
+							root: philippines.root + 'philippines/'
+						});
+
+					var south_korea = map_asia.registerZone({
+							name: 'South Korea',
+							fileName: 'asia-7-south-korea.png',
+							animations: {
+								active: {
+									top: -245,
+									left: -1143,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 82,
+									left: 383,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_south_korea = south_korea.createLevel({
+							root: south_korea.root + 'south-korea/'
+						});
+
+					var taiwan = map_asia.registerZone({
+							name: 'Taiwan',
+							fileName: 'asia-7-taiwan.png',
+							animations: {
+								active: {
+									top: -400,
+									left: -1058,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 137,
+									left: 355,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_taiwan = taiwan.createLevel({
+							root: taiwan.root + 'taiwan/'
+						});
+
+					var indonesia = map_asia.registerZone({
+							name: 'Indonesia',
+							fileName: 'asia-10-indonesia.png'
+						})/*,
+						map_indonesia = indonesia.createLevel({
+							root: indonesia.root + 'indonesia/'
+						})*/;
+
+					var malaysia = map_asia.registerZone({
+							name: 'Malaysia',
+							fileName: 'asia-10-malaysia.png',
+							animations: {
+								active: {
+									top: -602,
+									left: -994,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 193,
+									left: 333,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_malaysia = malaysia.createLevel({
+							root: malaysia.root + 'malaysia/'
+						});
+
+					var sri_lanka = map_asia.registerZone({
+							name: 'Sri Lanka',
+							fileName: 'asia-10-sri-lanka.png',
+							animations: {
+								active: {
+									top: -552,
+									left: -628,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 187,
+									left: 215,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_sri_lanka = sri_lanka.createLevel({
+							root: sri_lanka.root + 'sri-lanka/'
+						});
+
+					var brunei = map_asia.registerZone({
+							name: 'Brunei',
+							fileName: 'asia-11-brunei.png',
+							animations: {
+								active: {
+									top: -602,
+									left: -994,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 193,
+									left: 333,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_brunei = brunei.createLevel({
+							root: brunei.root + 'brunei/'
+						});
+
+					var east_timor = map_asia.registerZone({
+							name: 'East Timor',
+							fileName: 'asia-11-east-timor.png',
+							animations: {
+								active: {
+									top: -670,
+									left: -1119,
+									width: 2482,
+									height: 992,
+									opacity: 0
+								},
+								zone: {
+									top: 230,
+									left: 374,
+									width: 224,
+									height: 90
+								}
+							}
+						}),
+						map_east_timor = east_timor.createLevel({
+							root: east_timor.root + 'east-timor/'
+						});
 				/* Asia */
 
 				/* Australia-Oceania */

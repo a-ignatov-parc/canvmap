@@ -35,7 +35,9 @@ Map.prototype = {
 			animation: null,
 			animations: {
 				active: {},
-				zone: {},
+				zone: {
+					opacity: 0
+				},
 				reset: {
 					top: 0,
 					left: 0,
@@ -266,7 +268,7 @@ Map.prototype = {
 					var pixel = ctx.getImageData(event.pageX - mapPos.x, event.pageY - mapPos.y, 1, 1).data,
 						zone = this.currentLevelRoot.zones[i];
 
-					if (pixel[0] + pixel[1] + pixel[2] + pixel[3] > 0) {
+					if (pixel[0] + pixel[1] + pixel[2] + pixel[3] > 0 && zone) {
 						if (!zone.active) {
 							index = zone.index;
 							this.checkZone(index);
@@ -296,7 +298,7 @@ Map.prototype = {
 			}.bind(this));
 
 		if (!this.canvases[this.currentLevel.length - 1].length) {
-			this.loadGMap();
+			//this.loadGMap();
 		}
 	},
 
@@ -353,7 +355,7 @@ Map.prototype = {
 	},
 
 	zoomOut: function() {
-		if (this.currentLevel.length - 1) {
+		if (this.currentLevel.length - 1 && this.ready) {
 			var zone = this.getLevelRoot(),
 				parent;
 				
