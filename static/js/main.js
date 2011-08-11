@@ -75,7 +75,7 @@ Map.prototype = {
 					.removeClass('b-active_zone');
 			},
 			onClick: function() {
-				if (this.zone.mapImg) {
+				if (this.zone.mapImg && !this.animating) {
 					var activeMap = $('.b-map-content_map:visible', this.context.mapEl),
 						zoneMap = $(this.zone.mapImg);
 
@@ -85,12 +85,14 @@ Map.prototype = {
 					});
 					this.context.clearCanvasesList();
 					this.context.currentLevel.push(this.zone.index);
+					this.context.animating = true;
 					zoneMap
 						.css(this.zone.animations.zone)
 						.insertAfter(activeMap)
 						.animate(this.zone.animations.reset, 100);
 					activeMap
 						.animate(this.zone.animations.active, 200, function() {
+							this.animating = false;
 							activeMap.hide();
 							this.onReady(this.mapEl.find('.b-map-content'));
 						}.bind(this.context));
@@ -99,6 +101,7 @@ Map.prototype = {
 		}
 	},
 	ready: false,
+	animating: false,
 	totalImgs: 0,
 	loadedImgs: 0,
 	currentLevel: [0],
@@ -355,7 +358,7 @@ Map.prototype = {
 	},
 
 	zoomOut: function() {
-		if (this.currentLevel.length - 1 && this.ready) {
+		if (this.currentLevel.length - 1 && this.ready && !this.animating) {
 			var zone = this.getLevelRoot(),
 				parent;
 				
@@ -366,11 +369,13 @@ Map.prototype = {
 				zoneMap = $(zone.mapImg);
 
 			this.clearCanvasesList();
+			this.animating = true;
 			parentMap
 				.show()
 				.animate(zone.animations.reset, 200);
 			zoneMap
 				.animate(zone.animations.zone, 200, function() {
+					this.animating = false;
 					zoneMap.remove();
 					this.onReady(this.mapEl.find('.b-map-content'));
 				}.bind(this));
