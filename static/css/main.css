@@ -1,3 +1,7 @@
+body {
+	font: 0.9375em Arial,Helvetica,sans-serif;
+}
+
 .b-map {
 	width: 800px;
 	height: 320px;
@@ -83,4 +87,23 @@
 .b-map-gmap-zoom_out {
 	top: auto;
 	bottom: 0;
+}
+
+.b-city {
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+.b-city-name {
+	font-size: .8em;
+	color: #fff;
+	line-height: 1.66em;
+	display: block;
+}
+.b-city-icon {
+	width: 11px;
+	height: 11px;
+	background: url(../img/b-city-icon.png) no-repeat;
+	margin: 2px auto 0;
+	display: block;
 }

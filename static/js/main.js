@@ -39,6 +39,7 @@ Map.prototype = {
 					opacity: 1
 				}
 			},
+			cities: [],
 			onOver: function(callback) {
 				this.zone.animation && clearTimeout(this.zone.animation);
 				this.zone.animation = setTimeout(function() {
@@ -353,8 +354,31 @@ Map.prototype = {
 			}.bind(this));
 
 		if (levelCanvasList && !levelCanvasList.length) {
-			// Action on closest zoom
+			this.showCities();
 		}
+	},
+
+	showCities: function() {
+		if (this.currentLevelRoot.cities.length) {
+			var template = _.template($('#city-template').html()),
+				mapContent = this.mapEl.find('.b-map-content');
+
+			$(this.currentLevelRoot.cities).each(function(i, city) {
+				var cityEl = $(template(city)).appendTo(mapContent);
+
+				cityEl
+					.css({
+						marginLeft: -cityEl.width() / 2,
+						marginTop: -cityEl.height() / 2
+					})
+					.hide()
+					.fadeIn('fast');
+			});
+		}
+	},
+
+	clearCities: function() {
+		$('.b-city', this.mapEl).remove();
 	},
 
 	zoomOut: function() {
@@ -369,6 +393,7 @@ Map.prototype = {
 				zoneMap = $(zone.mapImg);
 
 			this.clearCanvasesList();
+			this.clearCities();
 			this.animating = true;
 			parentMap
 				.show()

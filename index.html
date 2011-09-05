@@ -1475,7 +1475,19 @@
 									width: 224,
 									height: 90
 								}
-							}
+							},
+							cities: [
+								{
+									top: 120,
+									left: 200,
+									name: 'Kirov'
+								},
+								{
+									top: 200,
+									left: 100,
+									name: 'Nuku\'alofa'
+								}
+							]
 						}),
 						map_kazakhstan = kazakhstan.createLevel({
 							root: kazakhstan.root + 'kazakhstan/'
@@ -7283,6 +7295,12 @@
 		<div class="b-map">
 			<div class="b-map-content"></div>
 			<i class="b-map-preloader"></i>
+		</div>
+	</script>
+	<script type="text/template" id="city-template">
+		<div class="b-city" style="<% top && print('top: ' + top + 'px;'); %><% left && print(' left: ' + left + 'px;'); %>">
+			<label class="b-city-name"><%= name %></label>
+			<i class="b-city-icon"></i>
 		</div>
 	</script>
 	<!-- Templates -->
