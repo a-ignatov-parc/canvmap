@@ -18,7 +18,7 @@
 		<script type="text/javascript" src="static/js/config.js"></script>
 		<script type="text/javascript" src="static/js/system.js"></script>
 
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&language=ru"></script>
+		<!--<script type="text/javascript" src="static/js/list_generator.js"></script>-->
 
 		<script type="text/javascript" src="static/js/main.js"></script>
 		<script type="text/javascript">
@@ -31,8 +31,1315 @@
 				/* Africa */
 				var africa = map.registerZone({
 						name: 'Africa',
-						fileName: 'africa.png'
+						fileName: 'africa.png',
+						animations: {
+							active: {
+								top: -302,
+								left: -378,
+								width: 1839,
+								height: 736,
+								opacity: 0
+							},
+							zone: {
+								top: 131,
+								left: 180,
+								width: 347,
+								height: 139
+							}
+						}
+					}),
+					map_africa = africa.createLevel({
+						root: africa.root + 'africa/'
 					});
+					var algeria = map_africa.registerZone({
+						name: 'Algeria',
+						fileName: 'africa-1-algeria.png',
+						animations: {
+							active: {
+								top: -32,
+								left: -644,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 7,
+								left: 170,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_algeria = algeria.createLevel({
+						root: algeria.root + 'algeria/'
+					});
+
+					var angola = map_africa.registerZone({
+						name: 'Angola',
+						fileName: 'africa-6-angola.png',
+						animations: {
+							active: {
+								top: -692,
+								left: -947,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 189,
+								left: 239,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_angola = angola.createLevel({
+						root: angola.root + 'angola/'
+					});
+
+					var benin = map_africa.registerZone({
+						name: 'Benin',
+						fileName: 'africa-6-benin.png',
+						animations: {
+							active: {
+								top: -352,
+								left: -657,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 116,
+								left: 202,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_benin = benin.createLevel({
+						root: benin.root + 'benin/'
+					});
+
+					var botswana = map_africa.registerZone({
+						name: 'Botswana',
+						fileName: 'africa-10-botswana.png',
+						animations: {
+							active: {
+								top: -864,
+								left: -1071,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 237,
+								left: 268,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_botswana = botswana.createLevel({
+						root: botswana.root + 'botswana/'
+					});
+
+					var burkinafaso = map_africa.registerZone({
+						name: 'Burkina-faso',
+						fileName: 'africa-2-burkina-faso.png',
+						animations: {
+							active: {
+								top: -304,
+								left: -584,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 105,
+								left: 181,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_burkinafaso = burkinafaso.createLevel({
+						root: burkinafaso.root + 'burkina-faso/'
+					});
+
+					var burundi = map_africa.registerZone({
+						name: 'Burundi',
+						fileName: 'africa-6-burundi.png',
+						animations: {
+							active: {
+								top: -652,
+								left: -437,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 175,
+								left: 28,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_burundi = burundi.createLevel({
+						root: burundi.root + 'burundi/'
+					});
+
+					var cameroon = map_africa.registerZone({
+						name: 'Cameroon',
+						fileName: 'africa-6-cameroon.png',
+						animations: {
+							active: {
+								top: -384,
+								left: -841,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 113,
+								left: 228,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_cameroon = cameroon.createLevel({
+						root: cameroon.root + 'cameroon/'
+					});
+
+					var canaryislands = map_africa.registerZone({
+						name: 'Canary-islands',
+						fileName: 'africa-1-canary-islands.png',
+						animations: {
+							active: {
+								top: -32,
+								left: -322,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 42,
+								left: 136,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_canaryislands = canaryislands.createLevel({
+						root: canaryislands.root + 'canary-islands/'
+					});
+
+					var capeverde = map_africa.registerZone({
+						name: 'Cape-verde',
+						fileName: 'africa-1-cape-verde.png',
+						animations: {
+							active: {
+								top: -220,
+								left: -156,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 87,
+								left: 109,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_capeverde = capeverde.createLevel({
+						root: capeverde.root + 'cape-verde/'
+					});
+
+					var centralafricanrepublic = map_africa.registerZone({
+						name: 'Central-african-republic',
+						fileName: 'africa-6-central-african-republic.png',
+						animations: {
+							active: {
+								top: -392,
+								left: -998,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 121,
+								left: 248,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_centralafricanrepublic = centralafricanrepublic.createLevel({
+						root: centralafricanrepublic.root + 'central-african-republic/'
+					});
+
+					var chad = map_africa.registerZone({
+						name: 'Chad',
+						fileName: 'africa-2-chad.png',
+						animations: {
+							active: {
+								top: -252,
+								left: -961,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 70,
+								left: 245,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_chad = chad.createLevel({
+						root: chad.root + 'chad/'
+					});
+
+					var comoros = map_africa.registerZone({
+						name: 'Comoros',
+						fileName: 'africa-7-comoros.png',
+						animations: {
+							active: {
+								top: -684,
+								left: -1430,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 208,
+								left: 347,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_comoros = comoros.createLevel({
+						root: comoros.root + 'comoros/'
+					});
+
+					var congo = map_africa.registerZone({
+						name: 'Congo',
+						fileName: 'africa-6-congo.png',
+						animations: {
+							active: {
+								top: -512,
+								left: -887,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 151,
+								left: 238,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_congo = congo.createLevel({
+						root: congo.root + 'congo/'
+					});
+
+					var djibouty = map_africa.registerZone({
+						name: 'Djibouty',
+						fileName: 'africa-7-djibouty.png',
+						animations: {
+							active: {
+								top: -308,
+								left: -1403,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 114,
+								left: 342,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_djibouty = djibouty.createLevel({
+						root: djibouty.root + 'djibouty/'
+					});
+
+					var egypt = map_africa.registerZone({
+						name: 'Egypt',
+						fileName: 'africa-2-egypt.png',
+						animations: {
+							active: {
+								top: -56,
+								left: -1182,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 33,
+								left: 284,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_egypt = egypt.createLevel({
+						root: egypt.root + 'egypt/'
+					});
+
+					var equatorialguinea = map_africa.registerZone({
+						name: 'Equatorial-guinea',
+						fileName: 'africa-6-equatorial-guinea.png',
+						animations: {
+							active: {
+								top: -332,
+								left: -257,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 84,
+								left: 29,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_equatorialguinea = equatorialguinea.createLevel({
+						root: equatorialguinea.root + 'equatorial-guinea/'
+					});
+
+					var eritrea = map_africa.registerZone({
+						name: 'Eritrea',
+						fileName: 'africa-6-eritrea.png',
+						animations: {
+							active: {
+								top: -252,
+								left: -1347,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 92,
+								left: 323,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_eritrea = eritrea.createLevel({
+						root: eritrea.root + 'eritrea/'
+					});
+
+					var ethiopia = map_africa.registerZone({
+						name: 'Ethiopia',
+						fileName: 'africa-2-ethiopia.png',
+						animations: {
+							active: {
+								top: -356,
+								left: -1361,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 107,
+								left: 312,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_ethiopia = ethiopia.createLevel({
+						root: ethiopia.root + 'ethiopia/'
+					});
+
+					var gabon = map_africa.registerZone({
+						name: 'Gabon',
+						fileName: 'africa-6-gabon.png',
+						animations: {
+							active: {
+								top: -516,
+								left: -828,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 157,
+								left: 229,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_gabon = gabon.createLevel({
+						root: gabon.root + 'gabon/'
+					});
+
+					var gambia = map_africa.registerZone({
+						name: 'Gambia',
+						fileName: 'africa-5-gambia.png',
+						animations: {
+							active: {
+								top: -80,
+								left: 13,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 6,
+								left: 14,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_gambia = gambia.createLevel({
+						root: gambia.root + 'gambia/'
+					});
+
+					var ghana = map_africa.registerZone({
+						name: 'Ghana',
+						fileName: 'africa-6-ghana.png',
+						animations: {
+							active: {
+								top: -376,
+								left: -593,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 121,
+								left: 188,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_ghana = ghana.createLevel({
+						root: ghana.root + 'ghana/'
+					});
+
+					var guinea = map_africa.registerZone({
+						name: 'Guinea',
+						fileName: 'africa-5-guinea.png',
+						animations: {
+							active: {
+								top: -344,
+								left: -404,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 115,
+								left: 148,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_guinea = guinea.createLevel({
+						root: guinea.root + 'guinea/'
+					});
+
+					var guineabissau = map_africa.registerZone({
+						name: 'Guinea-bissau',
+						fileName: 'africa-5-guinea-bissau.png',
+						animations: {
+							active: {
+								top: -148,
+								left: 9,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 33,
+								left: 16,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_guineabissau = guineabissau.createLevel({
+						root: guineabissau.root + 'guinea-bissau/'
+					});
+
+					var ivorycoast = map_africa.registerZone({
+						name: 'Ivory-coast',
+						fileName: 'africa-6-ivory-coast.png',
+						animations: {
+							active: {
+								top: -384,
+								left: -515,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 123,
+								left: 170,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_ivorycoast = ivorycoast.createLevel({
+						root: ivorycoast.root + 'ivory-coast/'
+					});
+
+					var kenya = map_africa.registerZone({
+						name: 'Kenya',
+						fileName: 'africa-6-kenya.png',
+						animations: {
+							active: {
+								top: -500,
+								left: -1311,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 147,
+								left: 314,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_kenya = kenya.createLevel({
+						root: kenya.root + 'kenya/'
+					});
+
+					var lesotho = map_africa.registerZone({
+						name: 'Lesotho',
+						fileName: 'africa-10-lesotho.png',
+						animations: {
+							active: {
+								top: -992,
+								left: -1140,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 284,
+								left: 292,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_lesotho = lesotho.createLevel({
+						root: lesotho.root + 'lesotho/'
+					});
+
+					var liberia = map_africa.registerZone({
+						name: 'Liberia',
+						fileName: 'africa-5-liberia.png',
+						animations: {
+							active: {
+								top: -400,
+								left: -441,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 132,
+								left: 161,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_liberia = liberia.createLevel({
+						root: liberia.root + 'liberia/'
+					});
+
+					var libya = map_africa.registerZone({
+						name: 'Libya',
+						fileName: 'africa-2-libya.png',
+						animations: {
+							active: {
+								top: -64,
+								left: -929,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 26,
+								left: 231,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_libya = libya.createLevel({
+						root: libya.root + 'libya/'
+					});
+
+					var madagascar = map_africa.registerZone({
+						name: 'Madagascar',
+						fileName: 'africa-7-madagascar.png',
+						animations: {
+							active: {
+								top: -804,
+								left: -1472,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 212,
+								left: 346,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_madagascar = madagascar.createLevel({
+						root: madagascar.root + 'madagascar/'
+					});
+
+					var malawi = map_africa.registerZone({
+						name: 'Malawi',
+						fileName: 'africa-6-malawi.png',
+						animations: {
+							active: {
+								top: -712,
+								left: -1251,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 203,
+								left: 312,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_malawi = malawi.createLevel({
+						root: malawi.root + 'malawi/'
+					});
+
+					var mali = map_africa.registerZone({
+						name: 'Mali',
+						fileName: 'africa-1-mali.png',
+						animations: {
+							active: {
+								top: -216,
+								left: -542,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 63,
+								left: 158,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_mali = mali.createLevel({
+						root: mali.root + 'mali/'
+					});
+
+					var mauritania = map_africa.registerZone({
+						name: 'Mauritania',
+						fileName: 'africa-1-mauritania.png',
+						animations: {
+							active: {
+								top: -160,
+								left: -414,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 53,
+								left: 142,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_mauritania = mauritania.createLevel({
+						root: mauritania.root + 'mauritania/'
+					});
+
+					var mauritius = map_africa.registerZone({
+						name: 'Mauritius',
+						fileName: 'africa-7-mauritius.png',
+						animations: {
+							active: {
+								top: -772,
+								left: -1734,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 212,
+								left: 394,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_mauritius = mauritius.createLevel({
+						root: mauritius.root + 'mauritius/'
+					});
+
+					var morocco = map_africa.registerZone({
+						name: 'Morocco',
+						fileName: 'africa-1-morocco.png',
+						animations: {
+							active: {
+								top: 36,
+								left: -483,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 12,
+								left: 155,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_morocco = morocco.createLevel({
+						root: morocco.root + 'morocco/'
+					});
+
+					var mozambique = map_africa.registerZone({
+						name: 'Mozambique',
+						fileName: 'africa-6-mozambique.png',
+						animations: {
+							active: {
+								top: -808,
+								left: -1269,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 208,
+								left: 302,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_mozambique = mozambique.createLevel({
+						root: mozambique.root + 'mozambique/'
+					});
+
+					var namibia = map_africa.registerZone({
+						name: 'Namibia',
+						fileName: 'africa-10-namibia.png',
+						animations: {
+							active: {
+								top: -876,
+								left: -956,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 234,
+								left: 239,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_namibia = namibia.createLevel({
+						root: namibia.root + 'namibia/'
+					});
+
+					var niger = map_africa.registerZone({
+						name: 'Niger',
+						fileName: 'africa-2-niger.png',
+						animations: {
+							active: {
+								top: -216,
+								left: -759,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 69,
+								left: 199,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_niger = niger.createLevel({
+						root: niger.root + 'niger/'
+					});
+
+					var nigeria = map_africa.registerZone({
+						name: 'Nigeria',
+						fileName: 'africa-6-nigeria.png',
+						animations: {
+							active: {
+								top: -356,
+								left: -772,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 110,
+								left: 209,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_nigeria = nigeria.createLevel({
+						root: nigeria.root + 'nigeria/'
+					});
+
+					var reunion = map_africa.registerZone({
+						name: 'Reunion',
+						fileName: 'africa-11-reunion.png',
+						animations: {
+							active: {
+								top: -948,
+								left: -634,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 251,
+								left: 18,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_reunion = reunion.createLevel({
+						root: reunion.root + 'reunion/'
+					});
+
+					var rwanda = map_africa.registerZone({
+						name: 'Rwanda',
+						fileName: 'africa-6-rwanda.png',
+						animations: {
+							active: {
+								top: -588,
+								left: -427,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 170,
+								left: 24,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_rwanda = rwanda.createLevel({
+						root: rwanda.root + 'rwanda/'
+					});
+
+					var saotomeandprincipe = map_africa.registerZone({
+						name: 'Sao-tome-and-principe',
+						fileName: 'africa-6-sao-tome-and-principe.png',
+						animations: {
+							active: {
+								top: -424,
+								left: -156,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 128,
+								left: 3,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_saotomeandprincipe = saotomeandprincipe.createLevel({
+						root: saotomeandprincipe.root + 'sao-tome-and-principe/'
+					});
+
+					var senegal = map_africa.registerZone({
+						name: 'Senegal',
+						fileName: 'africa-1-senegal.png',
+						animations: {
+							active: {
+								top: -272,
+								left: -349,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 99,
+								left: 140,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_senegal = senegal.createLevel({
+						root: senegal.root + 'senegal/'
+					});
+
+					var seychelles = map_africa.registerZone({
+						name: 'Seychelles',
+						fileName: 'africa-7-seychelles.png',
+						animations: {
+							active: {
+								top: -592,
+								left: -1614,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 170,
+								left: 369,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_seychelles = seychelles.createLevel({
+						root: seychelles.root + 'seychelles/'
+					});
+
+					var sierraleone = map_africa.registerZone({
+						name: 'Sierra-leone',
+						fileName: 'africa-5-sierra-leone.png',
+						animations: {
+							active: {
+								top: -368,
+								left: -400,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 126,
+								left: 154,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_sierraleone = sierraleone.createLevel({
+						root: sierraleone.root + 'sierra-leone/'
+					});
+
+					var somalia = map_africa.registerZone({
+						name: 'Somalia',
+						fileName: 'africa-6-somalia.png',
+						animations: {
+							active: {
+								top: -416,
+								left: -1467,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 117,
+								left: 339,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_somalia = somalia.createLevel({
+						root: somalia.root + 'somalia/'
+					});
+
+					var southafrica = map_africa.registerZone({
+						name: 'South-africa',
+						fileName: 'africa-10-south-africa.png',
+						animations: {
+							active: {
+								top: -976,
+								left: -1071,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 255,
+								left: 256,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_southafrica = southafrica.createLevel({
+						root: southafrica.root + 'south-africa/'
+					});
+
+					var sudan = map_africa.registerZone({
+						name: 'Sudan',
+						fileName: 'africa-6-sudan.png',
+						animations: {
+							active: {
+								top: -292,
+								left: -1173,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 75,
+								left: 274,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_sudan = sudan.createLevel({
+						root: sudan.root + 'sudan/'
+					});
+
+					var swaziland = map_africa.registerZone({
+						name: 'Swaziland',
+						fileName: 'africa-10-swaziland.png',
+						animations: {
+							active: {
+								top: -936,
+								left: -1200,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 271,
+								left: 305,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_swaziland = swaziland.createLevel({
+						root: swaziland.root + 'swaziland/'
+					});
+
+					var tanzania = map_africa.registerZone({
+						name: 'Tanzania',
+						fileName: 'africa-6-tanzania.png',
+						animations: {
+							active: {
+								top: -604,
+								left: -1260,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 170,
+								left: 300,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_tanzania = tanzania.createLevel({
+						root: tanzania.root + 'tanzania/'
+					});
+
+					var togo = map_africa.registerZone({
+						name: 'Togo',
+						fileName: 'africa-6-togo.png',
+						animations: {
+							active: {
+								top: -364,
+								left: -630,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 122,
+								left: 199,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_togo = togo.createLevel({
+						root: togo.root + 'togo/'
+					});
+
+					var tunisia = map_africa.registerZone({
+						name: 'Tunisia',
+						fileName: 'africa-2-tunisia.png',
+						animations: {
+							active: {
+								top: 72,
+								left: -791,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 5,
+								left: 225,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_tunisia = tunisia.createLevel({
+						root: tunisia.root + 'tunisia/'
+					});
+
+					var uganda = map_africa.registerZone({
+						name: 'Uganda',
+						fileName: 'africa-6-uganda.png',
+						animations: {
+							active: {
+								top: -480,
+								left: -1209,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 149,
+								left: 301,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_uganda = uganda.createLevel({
+						root: uganda.root + 'uganda/'
+					});
+
+					var westernsahara = map_africa.registerZone({
+						name: 'Western-sahara',
+						fileName: 'africa-1-western-sahara.png',
+						animations: {
+							active: {
+								top: -100,
+								left: -377,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 51,
+								left: 141,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_westernsahara = westernsahara.createLevel({
+						root: westernsahara.root + 'western-sahara/'
+					});
+
+					var zambia = map_africa.registerZone({
+						name: 'Zambia',
+						fileName: 'africa-6-zambia.png',
+						animations: {
+							active: {
+								top: -712,
+								left: -1131,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 199,
+								left: 274,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_zambia = zambia.createLevel({
+						root: zambia.root + 'zambia/'
+					});
+
+					var zimbabwe = map_africa.registerZone({
+						name: 'Zimbabwe',
+						fileName: 'africa-10-zimbabwe.png',
+						animations: {
+							active: {
+								top: -804,
+								left: -1154,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 227,
+								left: 286,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_zimbabwe = zimbabwe.createLevel({
+						root: zimbabwe.root + 'zimbabwe/'
+					});
+
+					var drc = map_africa.registerZone({
+						name: 'DRC',
+						fileName: 'africa-6-DRC.png',
+						animations: {
+							active: {
+								top: -256,
+								left: -371,
+								width: 1839,
+								height: 736,
+								opacity: 0
+							},
+							zone: {
+								top: 144,
+								left: 255,
+								width: 347,
+								height: 139
+							}
+						}
+					}),
+					map_drc = drc.createLevel({
+						root: drc.root + 'drc/'
+					});
+
+				
 				/* Africa */
 
 				/* Asia */
@@ -171,36 +1478,1990 @@
 							}
 						}),
 						map_kazakhstan = kazakhstan.createLevel({
-							root: kazakhstan.root + 'kazakhstan/',
-							gmapShift: {
-								lat: -1,
-								lng: 10
-							},
-							gmapZoom: 4
+							root: kazakhstan.root + 'kazakhstan/'
 						});
 
+				/* Russia */
 					var russia = map_asia.registerZone({
 							name: 'Russia',
 							fileName: 'asia-1-russia.png',
 							animations: {
-								active: {
-									top: 0,
-									left: -578,
-									width: 2482,
-									height: 992,
-									opacity: 0
-								},
-								zone: {
-									top: 0,
-									left: 211,
-									width: 224,
-									height: 90
-								}
+							active: {
+								top: 0,
+								left: -351,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: -10,
+								left: 109,
+								width: 533,
+								height: 213
+							}
 							}
 						}),
 						map_russia = russia.createLevel({
 							root: russia.root + 'russia/'
 						});
+
+					var arhangelsk = map_russia.registerZone({
+							name: 'Arhangelsk',
+							fileName: 'russia-1-arhangelsk.png',
+							animations: {
+								active: {
+									top: -275,
+									left: -73,
+									width: 2560,
+									height: 1024,
+									opacity: 0
+								},
+								zone: {
+									top: 107,
+									left: 105,
+									width: 250,
+									height: 100
+								}
+							}
+						}),
+						map_arhangelsk = arhangelsk.createLevel({
+							root: arhangelsk.root + 'arhangelsk/'
+						});
+
+					var abekan = map_russia.registerZone({
+							name: 'Abekan',
+							fileName: 'russia-10-abekan.png',
+							animations: {
+								active: {
+									top: -723,
+									left: -651,
+									width: 2560,
+									height: 1024,
+									opacity: 0
+								},
+								zone: {
+									top: 259,
+									left: 270,
+									width: 250,
+									height: 100
+								}
+							}
+						}),
+						map_abekan = abekan.createLevel({
+							root: arhangelsk.root + 'abekan/'
+						});
+
+				var anadyr = map_russia.registerZone({
+					name: 'Anadyr',
+					fileName: 'russia-3-anadyr.png',
+					animations: {
+						active: {
+							top: 60,
+							left: -1435,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 0,
+							left: 444,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_anadyr = anadyr.createLevel({
+							root: anadyr.root + 'anadyr/'
+						});
+
+				var aginskoe = map_russia.registerZone({
+					name: 'Aginskoe',
+					fileName: 'russia-11-aginskoe.png',
+					animations: {
+						active: {
+							top: -716,
+							left: -1094,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 268,
+							left: 386,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_aginskoe = aginskoe.createLevel({
+							root: aginskoe.root + 'aginskoe/'
+						});
+
+				var astrahan = map_russia.registerZone({
+					name: 'Astrahan',
+					fileName: 'russia-9-astrahan.png',
+					animations: {
+						active: {
+							top: -659,
+							left: 168,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 241,
+							left: 63,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_astrahan = astrahan.createLevel({
+							root: astrahan.root + 'astrahan/'
+						});
+
+				var barnaul = map_russia.registerZone({
+					name: 'Barnaul',
+					fileName: 'russia-10-barnaul.png',
+					animations: {
+						active: {
+							top: -742,
+							left: -517,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 266,
+							left: 225,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_barnaul = barnaul.createLevel({
+							root: barnaul.root + 'barnaul/'
+						});
+
+				var belgorod = map_russia.registerZone({
+					name: 'Belgorod',
+					fileName: 'russia-5-belgorod.png',
+					animations: {
+						active: {
+							top: -486,
+							left: 249,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 191,
+							left: 42,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_belgorod = belgorod.createLevel({
+							root: belgorod.root + 'belgorod/'
+						});
+
+				var birobidzhan = map_russia.registerZone({
+					name: 'Birobidzhan',
+					fileName: 'russia-11-birobidzhan.png',
+					animations: {
+						active: {
+							top: -633,
+							left: -1443,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 239,
+							left: 472,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_birobidzhan = birobidzhan.createLevel({
+							root: birobidzhan.root + 'birobidzhan/'
+						});
+
+				var blagoveshensk = map_russia.registerZone({
+					name: 'Blagoveshensk',
+					fileName: 'russia-7-blagoveshensk.png',
+					animations: {
+						active: {
+							top: -563,
+							left: -1267,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 199,
+							left: 400,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_blagoveshensk = blagoveshensk.createLevel({
+							root: blagoveshensk.root + 'blagoveshensk/'
+						});
+
+				var bryansk = map_russia.registerZone({
+					name: 'Bryansk',
+					fileName: 'russia-5-bryansk.png',
+					animations: {
+						active: {
+							top: -393,
+							left: 256,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 164,
+							left: 39,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_bryansk = bryansk.createLevel({
+							root: bryansk.root + 'bryansk/'
+						});
+
+				var cheboksary = map_russia.registerZone({
+					name: 'Cheboksary',
+					fileName: 'russia-5-cheboksary.png',
+					animations: {
+						active: {
+							top: -476,
+							left: 24,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 193,
+							left: 101,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_cheboksary = cheboksary.createLevel({
+							root: cheboksary.root + 'cheboksary/'
+						});
+
+				var chelyabinsk = map_russia.registerZone({
+					name: 'Chelyabinsk',
+					fileName: 'russia-9-chelyabinsk.png',
+					animations: {
+						active: {
+							top: -604,
+							left: -154,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 222,
+							left: 140,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_chelyabinsk = chelyabinsk.createLevel({
+							root: chelyabinsk.root + 'chelyabinsk/'
+						});
+
+				var cherkessk = map_russia.registerZone({
+					name: 'russia-9-cherkessk.png',
+					fileName: 'russia-9-cherkessk.png',
+					animations: {
+						active: {
+							top: -675,
+							left: 316,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 256,
+							left: 27,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+				map_cherkessk = cherkessk.createLevel({
+					root: cherkessk.root + 'cherkessk/'
+				});
+
+				var chita = map_russia.registerZone({
+					name: 'Chita',
+					fileName: 'russia-7-chita.png',
+					animations: {
+						active: {
+							top: -649,
+							left: -1094,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 210,
+							left: 366,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_chita = chita.createLevel({
+							root: chita.root + 'chita/'
+						});
+
+				var dudinka = map_russia.registerZone({
+					name: 'Dudinka',
+					fileName: 'russia-2-dudinka.png',
+					animations: {
+						active: {
+							top: -147,
+							left: -704,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 32,
+							left: 250,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_dudinka = dudinka.createLevel({
+							root: dudinka.root + 'dudinka/'
+						});
+
+				var ekaterinburg = map_russia.registerZone({
+					name: 'Ekaterinburg',
+					fileName: 'russia-5-ekaterinburg.png',
+					animations: {
+						active: {
+							top: -492,
+							left: -211,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 179,
+							left: 147,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_ekaterinburg = ekaterinburg.createLevel({
+							root: ekaterinburg.root + 'ekaterinburg/'
+						});
+
+				var elista = map_russia.registerZone({
+					name: 'Elista',
+					fileName: 'russia-9-elista.png',
+					animations: {
+						active: {
+							top: -659,
+							left: 224,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 240,
+							left: 42,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_elista = elista.createLevel({
+							root: elista.root + 'elista/'
+						});
+
+				var gornoaltaisk = map_russia.registerZone({
+					name: 'Gorno-altaisk',
+					fileName: 'russia-10-gorno-altaisk.png',
+					animations: {
+						active: {
+							top: -790,
+							left: -594,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 282,
+							left: 252,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_gornoaltaisk = gornoaltaisk.createLevel({
+							root: gornoaltaisk.root + 'gorno-altaisk/'
+						});
+
+				var groznyi = map_russia.registerZone({
+					name: 'Groznyi',
+					fileName: 'russia-9-groznyi.png',
+					animations: {
+						active: {
+							top: -729,
+							left: 259,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 272,
+							left: 39,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_groznyi = groznyi.createLevel({
+							root: groznyi.root + 'groznyi/'
+						});
+
+				var habarovsk = map_russia.registerZone({
+					name: 'Habarovsk',
+					fileName: 'russia-7-habarovsk.png',
+					animations: {
+						active: {
+							top: -438,
+							left: -1414,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 120,
+							left: 437,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_habarovsk = habarovsk.createLevel({
+							root: habarovsk.root + 'habarovsk/'
+						});
+
+				var hantymansiisk = map_russia.registerZone({
+					name: 'Hanty-mansiisk',
+					fileName: 'russia-5-hanty-mansiisk.png',
+					animations: {
+						active: {
+							top: -444,
+							left: -414,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 154,
+							left: 173,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_hantymansiisk = hantymansiisk.createLevel({
+							root: hantymansiisk.root + 'hanty-mansiisk/'
+						});
+
+				var ioshkarola = map_russia.registerZone({
+					name: 'Ioshkar-ola',
+					fileName: 'russia-5-ioshkar-ola.png',
+					animations: {
+						active: {
+							top: -460,
+							left: -3,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 188,
+							left: 106,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_ioshkarola = ioshkarola.createLevel({
+							root: ioshkarola.root + 'ioshkar-ola/'
+						});
+
+
+				var irkutsk = map_russia.registerZone({
+					name: 'Irkutsk',
+					fileName: 'russia-6-irkutsk.png',
+					animations: {
+						active: {
+							top: -582,
+							left: -921,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 176,
+							left: 306,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_irkutsk = irkutsk.createLevel({
+							root: irkutsk.root + 'irkutsk/'
+						});
+
+				var ivanovo = map_russia.registerZone({
+					name: 'Ivanovo',
+					fileName: 'russia-5-ivanovo.png',
+					animations: {
+						active: {
+							top: -396,
+							left: 66,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 168,
+							left: 88,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_ivanovo = ivanovo.createLevel({
+							root: ivanovo.root + 'ivanovo/'
+						});
+
+				var izhevsk = map_russia.registerZone({
+					name: 'Izhevsk',
+					fileName: 'russia-5-izhevsk.png',
+					animations: {
+						active: {
+							top: -486,
+							left: -77,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 191,
+							left: 125,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_izhevsk = izhevsk.createLevel({
+							root: izhevsk.root + 'izhevsk/'
+						});
+
+				var kaliningrad = map_russia.registerZone({
+					name: 'Kaliningrad',
+					fileName: 'russia-5-kaliningrad.png',
+					animations: {
+						active: {
+							top: -214,
+							left: 344,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 111,
+							left: 19,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kaliningrad = kaliningrad.createLevel({
+							root: kaliningrad.root + 'kaliningrad/'
+						});
+
+				var kaluga = map_russia.registerZone({
+					name: 'Kaluga',
+					fileName: 'russia-5-kaluga.png',
+					animations: {
+						active: {
+							top: -387,
+							left: 196,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 165,
+							left: 54,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kaluga = kaluga.createLevel({
+							root: kaluga.root + 'kaluga/'
+						});
+
+				var kareliya = map_russia.registerZone({
+					name: 'Kareliya',
+					fileName: 'russia-1-kareliya.png',
+					animations: {
+						active: {
+							top: -188,
+							left: 38,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 83,
+							left: 84,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kareliya = kareliya.createLevel({
+							root: kareliya.root + 'kareliya/'
+						});
+
+				var kazan = map_russia.registerZone({
+					name: 'Kazan',
+					fileName: 'russia-5-kazan.png',
+					animations: {
+						active: {
+							top: -518,
+							left: -20,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 199,
+							left: 104,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kazan = kazan.createLevel({
+							root: kazan.root + 'kazan/'
+						});
+
+				var kemerovo = map_russia.registerZone({
+					name: 'Kemerovo',
+					fileName: 'russia-10-kemerovo.png',
+					animations: {
+						active: {
+							top: -694,
+							left: -601,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 248,
+							left: 257,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kemerovo = kemerovo.createLevel({
+							root: kemerovo.root + 'kemerovo/'
+						});
+
+				var kirov = map_russia.registerZone({
+					name: 'Kirov',
+					fileName: 'russia-5-kirov.png',
+					animations: {
+						active: {
+							top: -428,
+							left: -62,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 162,
+							left: 111,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kirov = kirov.createLevel({
+							root: kirov.root + 'kirov/'
+						});
+
+				var kostroma = map_russia.registerZone({
+					name: 'Kostroma',
+					fileName: 'russia-5-kostroma.png',
+					animations: {
+						active: {
+							top: -387,
+							left: 13,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 161,
+							left: 94,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kostroma = kostroma.createLevel({
+							root: kostroma.root + 'kostroma/'
+						});
+
+				var krasnodar = map_russia.registerZone({
+					name: 'Krasnodar',
+					fileName: 'russia-9-krasnodar.png',
+					animations: {
+						active: {
+							top: -617,
+							left: 326,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 228,
+							left: 18,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_krasnodar = krasnodar.createLevel({
+							root: krasnodar.root + 'krasnodar/'
+						});
+
+				var krasnoyarsk = map_russia.registerZone({
+					name: 'Krasnoyarsk',
+					fileName: 'russia-6-krasnoyarsk.png',
+					animations: {
+						active: {
+							top: -540,
+							left: -699,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 149,
+							left: 256,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_krasnoyarsk = krasnoyarsk.createLevel({
+							root: krasnoyarsk.root + 'krasnoyarsk/'
+						});
+
+				var kurgan = map_russia.registerZone({
+					name: 'Kurgan',
+					fileName: 'russia-9-kurgan.png',
+					animations: {
+						active: {
+							top: -595,
+							left: -242,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 226,
+							left: 161,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kurgan = kurgan.createLevel({
+							root: kurgan.root + 'kurgan/'
+						});
+
+				var kursk = map_russia.registerZone({
+					name: 'Kursk',
+					fileName: 'russia-5-kursk.png',
+					animations: {
+						active: {
+							top: -451,
+							left: 242,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 182,
+							left: 42,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kursk = kursk.createLevel({
+							root: kursk.root + 'kursk/'
+						});
+
+				var kyzyl = map_russia.registerZone({
+					name: 'Kyzyl',
+					fileName: 'russia-10-kyzyl.png',
+					animations: {
+						active: {
+							top: -764,
+							left: -721,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 272,
+							left: 274,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_kyzyl = kyzyl.createLevel({
+							root: kyzyl.root + 'kyzyl/'
+						});
+
+				var lipetsk = map_russia.registerZone({
+					name: 'Lipetsk',
+					fileName: 'russia-5-lipetsk.png',
+					animations: {
+						active: {
+							top: -464,
+							left: 185,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 188,
+							left: 58,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_lipetsk = lipetsk.createLevel({
+							root: lipetsk.root + 'lipetsk/'
+						});
+
+				var magadan = map_russia.registerZone({
+					name: 'magadan',
+					fileName: 'russia-3-magadan.png',
+					animations: {
+						active: {
+							top: -137,
+							left: -1414,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 55,
+							left: 450,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_magadan = magadan.createLevel({
+							root: magadan.root + 'magadan/'
+						});
+
+				var mahachkala = map_russia.registerZone({
+					name: 'Mahachkala',
+					fileName: 'russia-9-mahachkala.png',
+					animations: {
+						active: {
+							top: -745,
+							left: 246,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 267,
+							left: 42,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_mahachkala = mahachkala.createLevel({
+							root: mahachkala.root + 'mahachkala/'
+						});
+
+				var maikop = map_russia.registerZone({
+					name: 'Maikop',
+					fileName: 'russia-9-maikop.png',
+					animations: {
+						active: {
+							top: -633,
+							left: 330,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 241,
+							left: 25,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_maikop = maikop.createLevel({
+							root: maikop.root + 'maikop/'
+						});
+
+				var moskva = map_russia.registerZone({
+					name: 'Moskva',
+					fileName: 'russia-5-moskva.png',
+					animations: {
+						active: {
+							top: -390,
+							left: 147,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 160,
+							left: 67,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_moskva = moskva.createLevel({
+							root: moskva.root + 'moskva/'
+						});
+
+				var murmansk = map_russia.registerZone({
+					name: 'Murmansk',
+					fileName: 'russia-1-murmansk.png',
+					animations: {
+						active: {
+							top: -124,
+							left: -70,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 67,
+							left: 116,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_murmansk = murmansk.createLevel({
+							root: murmansk.root + 'murmansk/'
+						});
+
+				var nalchik = map_russia.registerZone({
+					name: 'Nalchik',
+					fileName: 'russia-9-nalchik.png',
+					animations: {
+						active: {
+							top: -697,
+							left: 294,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 264,
+							left: 31,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_nalchik = nalchik.createLevel({
+							root: nalchik.root + 'nalchik/'
+						});
+
+				var naryanmar = map_russia.registerZone({
+					name: 'Naryan-mar',
+					fileName: 'russia-1-naryan-mar.png',
+					animations: {
+						active: {
+							top: -96,
+							left: -326,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 17,
+							left: 147,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_naryanmar = naryanmar.createLevel({
+							root: naryanmar.root + 'naryan-mar/'
+						});
+
+				var nazran = map_russia.registerZone({
+					name: 'Nazran',
+					fileName: 'russia-9-nazran.png',
+					animations: {
+						active: {
+							top: -713,
+							left: 288,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 269,
+							left: 35,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_nazran = nazran.createLevel({
+							root: nazran.root + 'nazran/'
+						});
+
+				var nizhniinovgorod = map_russia.registerZone({
+					name: 'Nizhnii-novgorod',
+					fileName: 'russia-5-nizhnii-novgorod.png',
+					animations: {
+						active: {
+							top: -441,
+							left: 38,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 177,
+							left: 87,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_nizhniinovgorod = nizhniinovgorod.createLevel({
+							root: nizhniinovgorod.root + 'nizhnii-novgorod/'
+						});
+
+				var novgorod = map_russia.registerZone({
+					name: 'Novgorod',
+					fileName: 'russia-5-novgorod.png',
+					animations: {
+						active: {
+							top: -284,
+							left: 147,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 129,
+							left: 63,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_novgorod = novgorod.createLevel({
+							root: novgorod.root + 'novgorod/'
+						});
+
+				var novosibirsk = map_russia.registerZone({
+					name: 'Novosibirsk',
+					fileName: 'russia-10-novosibirsk.png',
+					animations: {
+						active: {
+							top: -659,
+							left: -485,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 238,
+							left: 216,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_novosibirsk = novosibirsk.createLevel({
+							root: novosibirsk.root + 'novosibirsk/'
+						});
+
+				var omsk = map_russia.registerZone({
+					name: 'omsk',
+					fileName: 'russia-10-omsk.png',
+					animations: {
+						active: {
+							top: -624,
+							left: -376,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 223,
+							left: 197,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_omsk = omsk.createLevel({
+							root: omsk.root + 'omsk/'
+						});
+
+				var orel = map_russia.registerZone({
+					name: 'Oel',
+					fileName: 'russia-5-orel.png',
+					animations: {
+						active: {
+							top: -432,
+							left: 221,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 177,
+							left: 49,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_orel = orel.createLevel({
+							root: orel.root + 'orel/'
+						});
+
+				var orenburg = map_russia.registerZone({
+					name: 'Orenburg',
+					fileName: 'russia-9-orenburg.png',
+					animations: {
+						active: {
+							top: -620,
+							left: -52,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 221,
+							left: 105,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_orenburg = orenburg.createLevel({
+							root: orenburg.root + 'orenburg/'
+						});
+
+				var palana = map_russia.registerZone({
+					name: 'Palana',
+					fileName: 'russia-3-palana.png',
+					animations: {
+						active: {
+							top: -76,
+							left: -1523,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 26,
+							left: 479,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_palana = palana.createLevel({
+							root: palana.root + 'palana/'
+						});
+
+				var penza = map_russia.registerZone({
+					name: 'Penza',
+					fileName: 'russia-5-penza.png',
+					animations: {
+						active: {
+							top: -502,
+							left: 101,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 196,
+							left: 78,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_penza = penza.createLevel({
+							root: penza.root + 'penza/'
+						});
+
+				var perm = map_russia.registerZone({
+					name: 'Perm',
+					fileName: 'russia-5-perm.png',
+					animations: {
+						active: {
+							top: -467,
+							left: -158,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 174,
+							left: 135,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_perm = perm.createLevel({
+							root: perm.root + 'perm/'
+						});
+
+				var petropavlovskkamchatskii = map_russia.registerZone({
+					name: 'Petropavlovsk-kamchatskii',
+					fileName: 'russia-3-petropavlovsk-kamchatskii.png',
+					animations: {
+						active: {
+							top: -323,
+							left: -1672,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 73,
+							left: 518,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_petropavlovskkamchatskii = petropavlovskkamchatskii.createLevel({
+							root: petropavlovskkamchatskii.root + 'petropavlovsk-kamchatskii/'
+						});
+
+				var pskov = map_russia.registerZone({
+					name: 'Pskov',
+					fileName: 'russia-5-pskov.png',
+					animations: {
+						active: {
+							top: -268,
+							left: 206,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 119,
+							left: 52,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_pskov = pskov.createLevel({
+							root: pskov.root + 'pskov/'
+						});
+
+				var rostovnadonu = map_russia.registerZone({
+					name: 'Rostov-na-donu',
+					fileName: 'russia-5-rostov-na-donu.png',
+					animations: {
+						active: {
+							top: -588,
+							left: 253,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 217,
+							left: 34,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_rostovnadonu = rostovnadonu.createLevel({
+							root: rostovnadonu.root + 'rostov-na-donu/'
+						});
+
+				var ryazan = map_russia.registerZone({
+					name: 'Ryazan',
+					fileName: 'russia-5-ryazan.png',
+					animations: {
+						active: {
+							top: -444,
+							left: 129,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 181,
+							left: 71,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_ryazan = ryazan.createLevel({
+							root: ryazan.root + 'ryazan/'
+						});
+
+				var salehard = map_russia.registerZone({
+					name: 'salehard',
+					fileName: 'russia-2-salehard.png',
+					animations: {
+						active: {
+							top: -320,
+							left: -449,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 98,
+							left: 191,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_salehard = salehard.createLevel({
+							root: salehard.root + 'salehard/'
+						});
+
+				var samara = map_russia.registerZone({
+					name: 'Samara',
+					fileName: 'russia-5-samara.png',
+					animations: {
+						active: {
+							top: -560,
+							left: 9,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 215,
+							left: 99,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_samara = samara.createLevel({
+							root: samara.root + 'samara/'
+						});
+
+				var sanktpeterburg = map_russia.registerZone({
+					name: 'Sankt-peterburg',
+					fileName: 'russia-5-sankt-peterburg.png',
+					animations: {
+						active: {
+							top: -243,
+							left: 115,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 111,
+							left: 67,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_sanktpeterburg = sanktpeterburg.createLevel({
+							root: sanktpeterburg.root + 'sankt-peterburg/'
+						});
+
+				var saransk = map_russia.registerZone({
+					name: 'Saransk',
+					fileName: 'russia-5-saransk.png',
+					animations: {
+						active: {
+							top: -473,
+							left: 83,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 191,
+							left: 81,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_saransk = saransk.createLevel({
+							root: saransk.root + 'saransk/'
+						});
+
+				var saratov = map_russia.registerZone({
+					name: 'Saratov',
+					fileName: 'russia-5-saratov.png',
+					animations: {
+						active: {
+							top: -560,
+							left: 97,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 208,
+							left: 72,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_saratov = saratov.createLevel({
+							root: saratov.root + 'saratov/'
+						});
+
+				var smolensk = map_russia.registerZone({
+					name: 'Smolensk',
+					fileName: 'russia-5-smolensk.png',
+					animations: {
+						active: {
+							top: -345,
+							left: 206,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 149,
+							left: 49,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_smolensk = smolensk.createLevel({
+							root: smolensk.root + 'smolensk/'
+						});
+
+				var stavropol = map_russia.registerZone({
+					name: 'Stavropol',
+					fileName: 'russia-9-stavropol.png',
+					animations: {
+						active: {
+							top: -668,
+							left: 267,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 245,
+							left: 35,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_stavropol = stavropol.createLevel({
+							root: stavropol.root + 'stavropol/'
+						});
+
+				var syktyvkar = map_russia.registerZone({
+					name: 'Syktyvkar',
+					fileName: 'russia-5-syktyvkar.png',
+					animations: {
+						active: {
+							top: -332,
+							left: -221,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 128,
+							left: 130,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_syktyvkar = syktyvkar.createLevel({
+							root: syktyvkar.root + 'syktyvkar/'
+						});
+
+				var tambov = map_russia.registerZone({
+					name: 'Tambov',
+					fileName: 'russia-5-tambov.png',
+					animations: {
+						active: {
+							top: -489,
+							left: 150,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 194,
+							left: 67,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_tambov = tambov.createLevel({
+							root: tambov.root + 'tambov/'
+						});
+
+				var tomsk = map_russia.registerZone({
+					name: 'Tomsk',
+					fileName: 'russia-6-tomsk.png',
+					animations: {
+						active: {
+							top: -585,
+							left: -531,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 210,
+							left: 221,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_tomsk = tomsk.createLevel({
+							root: tomsk.root + 'tomsk/'
+						});
+
+				var tula = map_russia.registerZone({
+					name: 'Tula',
+					fileName: 'russia-5-tula.png',
+					animations: {
+						active: {
+							top: -422,
+							left: 179,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 175,
+							left: 61,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_tula = tula.createLevel({
+							root: tula.root + 'tula/'
+						});
+
+				var tura = map_russia.registerZone({
+					name: 'Tura',
+					fileName: 'russia-6-tura.png',
+					animations: {
+						active: {
+							top: -416,
+							left: -763,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 134,
+							left: 276,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_tura = tura.createLevel({
+							root: tura.root + 'tura/'
+						});
+
+				var tver = map_russia.registerZone({
+					name: 'tver',
+					fileName: 'russia-5-tver.png',
+					animations: {
+						active: {
+							top: -332,
+							left: 150,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 141,
+							left: 58,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_tver = tver.createLevel({
+							root: tver.root + 'tver/'
+						});
+
+				var tyumen = map_russia.registerZone({
+					name: 'Tyumen',
+					fileName: 'russia-5-tyumen.png',
+					animations: {
+						active: {
+							top: -569,
+							left: -337,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 209,
+							left: 178,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_tyumen = tyumen.createLevel({
+							root: tyumen.root + 'tyumen/'
+						});
+
+				var ufa = map_russia.registerZone({
+					name: 'Ufa',
+					fileName: 'russia-5-ufa.png',
+					animations: {
+						active: {
+							top: -582,
+							left: -101,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 211,
+							left: 125,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_ufa = ufa.createLevel({
+							root: ufa.root + 'ufa/'
+						});
+
+				var ulanude = map_russia.registerZone({
+					name: 'Ulan-ude',
+					fileName: 'russia-10-ulan-ude.png',
+					animations: {
+						active: {
+							top: -668,
+							left: -953,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 223,
+							left: 320,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_ulanude = ulanude.createLevel({
+							root: ulanude.root + 'ulan-ude/'
+						});
+
+				var ulyanovsk = map_russia.registerZone({
+					name: 'Ulyanovsk',
+					fileName: 'russia-5-ulyanovsk.png',
+					animations: {
+						active: {
+							top: -518,
+							left: 38,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 203,
+							left: 93,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_ulyanovsk = ulyanovsk.createLevel({
+							root: ulyanovsk.root + 'ulyanovsk/'
+						});
+
+				var ustordynskii = map_russia.registerZone({
+					name: 'Ust-ordynskii',
+					fileName: 'russia-10-ust-ordynskii.png',
+					animations: {
+						active: {
+							top: -704,
+							left: -900,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 265,
+							left: 335,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_ustordynskii = ustordynskii.createLevel({
+							root: ustordynskii.root + 'ust-ordynskii/'
+						});
+
+				var vladimir = map_russia.registerZone({
+					name: 'Vladimir',
+					fileName: 'russia-5-vladimir.png',
+					animations: {
+						active: {
+							top: -406,
+							left: 94,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 167,
+							left: 81,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_vladimir = vladimir.createLevel({
+							root: vladimir.root + 'vladimir/'
+						});
+
+				var vladivostok = map_russia.registerZone({
+					name: 'Vladivostok',
+					fileName: 'russia-11-vladivostok.png',
+					animations: {
+						active: {
+							top: -678,
+							left: -1526,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 228,
+							left: 491,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_vladivostok = vladivostok.createLevel({
+							root: vladivostok.root + 'vladivostok/'
+						});
+
+				var volgograd = map_russia.registerZone({
+					name: 'Volgograd',
+					fileName: 'russia-5-volgograd.png',
+					animations: {
+						active: {
+							top: -572,
+							left: 171,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 213,
+							left: 54,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_volgograd = volgograd.createLevel({
+							root: volgograd.root + 'volgograd/'
+						});
+
+				var vologda = map_russia.registerZone({
+					name: 'Vologda',
+					fileName: 'russia-5-vologda.png',
+					animations: {
+						active: {
+							top: -326,
+							left: 20,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 132,
+							left: 86,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_vologda = vologda.createLevel({
+							root: vologda.root + 'vologda/'
+						});
+
+				var voronezh = map_russia.registerZone({
+					name: 'Voronezh',
+					fileName: 'russia-5-voronezh.png',
+					animations: {
+						active: {
+							top: -502,
+							left: 200,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 196,
+							left: 52,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_voronezh = voronezh.createLevel({
+							root: voronezh.root + 'voronezh/'
+						});
+
+				var yakutsk = map_russia.registerZone({
+					name: 'Yakutsk',
+					fileName: 'russia-2-yakutsk.png',
+					animations: {
+						active: {
+							top: -230,
+							left: -1094,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 26,
+							left: 324,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_yakutsk = yakutsk.createLevel({
+							root: yakutsk.root + 'yakutsk/'
+						});
+
+				var yaroslavl = map_russia.registerZone({
+					name: 'Yaroslavl',
+					fileName: 'russia-5-yaroslavl.png',
+					animations: {
+						active: {
+							top: -358,
+							left: 80,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 154,
+							left: 84,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_yaroslavl = yaroslavl.createLevel({
+							root: yaroslavl.root + 'yaroslavl/'
+						});
+
+				var yuzhnosahalinsk = map_russia.registerZone({
+					name: 'Yuzhno-sahalinsk',
+					fileName: 'russia-7-yuzhno-sahalinsk.png',
+					animations: {
+						active: {
+							top: -489,
+							left: -1566,
+							width: 2560,
+							height: 1024,
+							opacity: 0
+						},
+						zone: {
+							top: 176,
+							left: 491,
+							width: 250,
+							height: 100
+						}
+					}
+				}),
+						map_yuzhnosahalinsk = yuzhnosahalinsk.createLevel({
+							root: yuzhnosahalinsk.root + 'yuzhno-sahalinsk/'
+						});
+
+				/* end:Russia */
 
 					var turkey = map_asia.registerZone({
 							name: 'Turkey',
@@ -616,6 +3877,29 @@
 							root: saudi_arabia.root + 'saudi-arabia/'
 						});
 
+					var singapore = map_asia.registerZone({
+						name: 'Singapore',
+						fileName: 'asia-10-singapore.png',
+						animations: {
+							active: {
+								top: -467,
+								left: -222,
+								width: 1839,
+								height: 736,
+								opacity: 0
+							},
+							zone: {
+								top: 258,
+								left: 126,
+								width: 347,
+								height: 139
+							}
+						}
+					}),
+					map_singapore = singapore.createLevel({
+						root: singapore.root + 'singapore/'
+					});
+
 					var syria = map_asia.registerZone({
 							name: 'Syria',
 							fileName: 'asia-5-syria.png',
@@ -706,29 +3990,6 @@
 						}),
 						map_afghanistan = afghanistan.createLevel({
 							root: afghanistan.root + 'afghanistan/'
-						});
-
-					var bangladesh = map_asia.registerZone({
-							name: 'Bangladesh',
-							fileName: 'asia-6-bangladesh.png',
-							animations: {
-								active: {
-									top: -391,
-									left: -732,
-									width: 2482,
-									height: 992,
-									opacity: 0
-								},
-								zone: {
-									top: 129,
-									left: 241,
-									width: 224,
-									height: 90
-								}
-							}
-						}),
-						map_bangladesh = bangladesh.createLevel({
-							root: bangladesh.root + 'bangladesh/'
 						});
 
 					var bhutan = map_asia.registerZone({
@@ -1030,13 +4291,29 @@
 							root: taiwan.root + 'taiwan/'
 						});
 
+
 					var indonesia = map_asia.registerZone({
-							name: 'Indonesia',
-							fileName: 'asia-10-indonesia.png'
-						})/*,
-						map_indonesia = indonesia.createLevel({
-							root: indonesia.root + 'indonesia/'
-						})*/;
+						name: 'Indonesia',
+						fileName: 'asia-10-indonesia.png',
+						animations: {
+							active: {
+								top: -467,
+								left: -629,
+								width: 1839,
+								height: 736,
+								opacity: 0
+							},
+							zone: {
+								top: 243,
+								left: 318,
+								width: 347,
+								height: 139
+							}
+						}
+					}),
+					map_indonesia = indonesia.createLevel({
+						root: indonesia.root + 'indonesia/'
+					});
 
 					var malaysia = map_asia.registerZone({
 							name: 'Malaysia',
@@ -1132,30 +4409,2867 @@
 				/* Asia */
 
 				/* Australia-Oceania */
-				var australia = map.registerZone({
-						name: 'Australia-Oceania',
-						fileName: 'australia-oceania.png'
+					var oceania = map.registerZone({
+						name: 'Oceania',
+						fileName: 'oceania.png',
+						animations: {
+							active: {
+								top: -850,
+								left: -1713,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 204,
+								left: 449,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_oceania = oceania.createLevel({
+						root: oceania.root + 'oceania/'
 					});
+
+					var australia = map_oceania.registerZone({
+						name: 'Australia',
+						fileName: 'oceania-1-australia.png',
+						animations: {
+							active: {
+								top: -47,
+								left: 24,
+								width: 960,
+								height: 384,
+								opacity: 0
+							},
+							zone: {
+								top: 20,
+								left: 5,
+								width: 666,
+								height: 266
+							}
+						}
+					}),
+					map_australia = australia.createLevel({
+						root: australia.root + 'australia/'
+					});
+
+					var fiji = map_oceania.registerZone({
+						name: 'Fiji',
+						fileName: 'oceania-3-fiji.png',
+						animations: {
+							active: {
+								top: -252,
+								left: -1895,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 92,
+								left: 427,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_fiji = fiji.createLevel({
+						root: fiji.root + 'fiji/'
+					});
+
+					var newcaledonia = map_oceania.registerZone({
+						name: 'New-caledonia',
+						fileName: 'oceania-7-new-caledonia.png',
+						animations: {
+							active: {
+								top: -340,
+								left: -1541,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 115,
+								left: 358,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_newcaledonia = newcaledonia.createLevel({
+						root: newcaledonia.root + 'new-caledonia/'
+					});
+
+					var newzealand = map_oceania.registerZone({
+						name: 'New-zealand',
+						fileName: 'oceania-3-new-zealand.png',
+						animations: {
+							active: {
+								top: -892,
+								left: -1720,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 212,
+								left: 374,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_newzealand = newzealand.createLevel({
+						root: newzealand.root + 'new-zealand/'
+					});
+
+					var papuanewguinea = map_oceania.registerZone({
+						name: 'Papua-new-guinea',
+						fileName: 'oceania-2-papua-new-guinea.png',
+						animations: {
+							active: {
+								top: 12,
+								left: -1062,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 6,
+								left: 244,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_papuanewguinea = papuanewguinea.createLevel({
+						root: papuanewguinea.root + 'papua-new-guinea/'
+					});
+
+					var vanuatu = map_oceania.registerZone({
+						name: 'Vanuatu',
+						fileName: 'oceania-3-vanuatu.png',
+						animations: {
+							active: {
+								top: -240,
+								left: -1605,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 80,
+								left: 374,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_vanuatu = vanuatu.createLevel({
+						root: vanuatu.root + 'vanuatu/'
+					});
+
 				/* Australia-Oceania */
 
 				/* Europe */
-				var europa = map.registerZone({
+				var europe = map.registerZone({
 						name: 'Europe',
-						fileName: 'europe.png'
+						fileName: 'europe.png',
+						animations: {
+							active: {
+								top: -148,
+								left: -932,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 30,
+								left: 213,
+								width: 266,
+								height: 106
+							}
+						}
+					}),
+						map_europe = europe.createLevel({
+							root: europe.root + 'europe/'
+						});
+
+					var albania = map_europe.registerZone({
+						name: 'Albania',
+						fileName: 'europe-10-albania.png',
+						animations: {
+							active: {
+								top: -892,
+								left: -1389,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 249,
+								left: 336,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_albania = albania.createLevel({
+						root: albania.root + 'albania/'
 					});
+
+					var andorra = map_europe.registerZone({
+						name: 'Andorra',
+						fileName: 'europe-10-andorra.png',
+						animations: {
+							active: {
+								top: -508,
+								left: -184,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 98,
+								left: 22,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_andorra = andorra.createLevel({
+						root: andorra.root + 'andorra/'
+					});
+
+					var austria = map_europe.registerZone({
+						name: 'Austria',
+						fileName: 'europe-6-austria.png',
+						animations: {
+							active: {
+								top: -620,
+								left: -1145,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 182,
+								left: 273,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_austria = austria.createLevel({
+						root: austria.root + 'austria/'
+					});
+
+					var belarus = map_europe.registerZone({
+						name: 'Belarus',
+						fileName: 'europe-6-belarus.png',
+						animations: {
+							active: {
+								top: -484,
+								left: -1412,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 137,
+								left: 323,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_belarus = belarus.createLevel({
+						root: belarus.root + 'belarus/'
+					});
+
+					var belgium = map_europe.registerZone({
+						name: 'Belgium',
+						fileName: 'europe-6-belgium.png',
+						animations: {
+							active: {
+								top: -468,
+								left: -883,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 145,
+								left: 239,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_belgium = belgium.createLevel({
+						root: belgium.root + 'belgium/'
+					});
+
+					var bosnia = map_europe.registerZone({
+						name: 'Bosnia',
+						fileName: 'europe-10-bosnia.png',
+						animations: {
+							active: {
+								top: -844,
+								left: -1131,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 240,
+								left: 285,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_bosnia = bosnia.createLevel({
+						root: bosnia.root + 'bosnia/'
+					});
+
+					var bulgaria = map_europe.registerZone({
+						name: 'Bulgaria',
+						fileName: 'europe-10-bulgaria.png',
+						animations: {
+							active: {
+								top: -880,
+								left: -1343,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 249,
+								left: 318,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_bulgaria = bulgaria.createLevel({
+						root: bulgaria.root + 'bulgaria/'
+					});
+
+					var croatia = map_europe.registerZone({
+						name: 'Croatia',
+						fileName: 'europe-10-croatia.png',
+						animations: {
+							active: {
+								top: -824,
+								left: -1094,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 229,
+								left: 273,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_croatia = croatia.createLevel({
+						root: croatia.root + 'croatia/'
+					});
+
+					var czechrepublic = map_europe.registerZone({
+						name: 'Czech-republic',
+						fileName: 'europe-6-czech-republic.png',
+						animations: {
+							active: {
+								top: -532,
+								left: -1232,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 159,
+								left: 293,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_czechrepublic = czechrepublic.createLevel({
+						root: czechrepublic.root + 'czech-republic/'
+					});
+
+					var denmark = map_europe.registerZone({
+						name: 'Denmark',
+						fileName: 'europe-6-denmark.png',
+						animations: {
+							active: {
+								top: -388,
+								left: -929,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 120,
+								left: 246,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_denmark = denmark.createLevel({
+						root: denmark.root + 'denmark/'
+					});
+
+					var estonia = map_europe.registerZone({
+						name: 'Estonia',
+						fileName: 'europe-2-estonia.png',
+						animations: {
+							active: {
+								top: -280,
+								left: -1329,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 98,
+								left: 316,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_estonia = estonia.createLevel({
+						root: estonia.root + 'estonia/'
+					});
+
+					var finland = map_europe.registerZone({
+						name: 'Finland',
+						fileName: 'europe-2-finland.png',
+						animations: {
+							active: {
+								top: -32,
+								left: -1366,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 0,
+								left: 312,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_finland = finland.createLevel({
+						root: finland.root + 'finland/'
+					});
+
+					var france = map_europe.registerZone({
+						name: 'France',
+						fileName: 'europe-6-france.png',
+						animations: {
+							active: {
+								top: -644,
+								left: -772,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 147,
+								left: 188,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_france = france.createLevel({
+						root: france.root + 'france/'
+					});
+
+					var germany = map_europe.registerZone({
+						name: 'Germany',
+						fileName: 'europe-6-germany.png',
+						animations: {
+							active: {
+								top: -464,
+								left: -1071,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 115,
+								left: 257,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_germany = germany.createLevel({
+						root: germany.root + 'germany/'
+					});
+
+					var greece = map_europe.registerZone({
+						name: 'Greece',
+						fileName: 'europe-10-greece.png',
+						animations: {
+							active: {
+								top: -1016,
+								left: -1288,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 269,
+								left: 307,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_greece = greece.createLevel({
+						root: greece.root + 'greece/'
+					});
+
+					var hungary = map_europe.registerZone({
+						name: 'Hungary',
+						fileName: 'europe-6-hungary.png',
+						animations: {
+							active: {
+								top: -640,
+								left: -1357,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 185,
+								left: 316,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_hungary = hungary.createLevel({
+						root: hungary.root + 'hungary/'
+					});
+
+					var iceland = map_europe.registerZone({
+						name: 'Iceland',
+						fileName: 'europe-1-iceland.png',
+						animations: {
+							active: {
+								top: 4,
+								left: 239,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 6,
+								left: 10,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_iceland = iceland.createLevel({
+						root: iceland.root + 'iceland/'
+					});
+
+					var ireland = map_europe.registerZone({
+						name: 'Ireland',
+						fileName: 'europe-5-ireland.png',
+						animations: {
+							active: {
+								top: -500,
+								left: -423,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 147,
+								left: 153,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_ireland = ireland.createLevel({
+						root: ireland.root + 'ireland/'
+					});
+
+					var italy = map_europe.registerZone({
+						name: 'Italy',
+						fileName: 'europe-10-italy.png',
+						animations: {
+							active: {
+								top: -904,
+								left: -989,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 224,
+								left: 238,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_italy = italy.createLevel({
+						root: italy.root + 'italy/'
+					});
+
+					var kosovo = map_europe.registerZone({
+						name: 'Kosovo',
+						fileName: 'europe-10-kosovo.png',
+						animations: {
+							active: {
+								top: -920,
+								left: -1242,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 264,
+								left: 309,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_kosovo = kosovo.createLevel({
+						root: kosovo.root + 'kosovo/'
+					});
+
+					var latvia = map_europe.registerZone({
+						name: 'Latvia',
+						fileName: 'europe-6-latvia.png',
+						animations: {
+							active: {
+								top: -356,
+								left: -1320,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 116,
+								left: 311,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_latvia = latvia.createLevel({
+						root: latvia.root + 'latvia/'
+					});
+
+					var liechtenstein = map_europe.registerZone({
+						name: 'Liechtenstein',
+						fileName: 'europe-10-liechtenstein.png',
+						animations: {
+							active: {
+								top: -912,
+								left: -294,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 223,
+								left: 27,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_liechtenstein = liechtenstein.createLevel({
+						root: liechtenstein.root + 'liechtenstein/'
+					});
+
+					var lithuania = map_europe.registerZone({
+						name: 'Lithuania',
+						fileName: 'europe-6-lithuania.png',
+						animations: {
+							active: {
+								top: -428,
+								left: -1301,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 134,
+								left: 312,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_lithuania = lithuania.createLevel({
+						root: lithuania.root + 'lithuania/'
+					});
+
+					var luxembourg = map_europe.registerZone({
+						name: 'Luxembourg',
+						fileName: 'europe-6-luxembourg.png',
+						animations: {
+							active: {
+								top: -624,
+								left: -303,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 161,
+								left: 25,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_luxembourg = luxembourg.createLevel({
+						root: luxembourg.root + 'luxembourg/'
+					});
+
+					var macedonia = map_europe.registerZone({
+						name: 'Macedonia',
+						fileName: 'europe-10-macedonia.png',
+						animations: {
+							active: {
+								top: -920,
+								left: -1242,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 264,
+								left: 309,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_macedonia = macedonia.createLevel({
+						root: macedonia.root + 'macedonia/'
+					});
+
+					var moldova = map_europe.registerZone({
+						name: 'Moldova',
+						fileName: 'europe-7-moldova.png',
+						animations: {
+							active: {
+								top: -632,
+								left: -1669,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 183,
+								left: 382,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_moldova = moldova.createLevel({
+						root: moldova.root + 'moldova/'
+					});
+
+					var montenegro = map_europe.registerZone({
+						name: 'Montenegro',
+						fileName: 'europe-10-montenegro.png',
+						animations: {
+							active: {
+								top: -820,
+								left: -1357,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 235,
+								left: 329,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_montenegro = montenegro.createLevel({
+						root: montenegro.root + 'montenegro/'
+					});
+
+					var netherlands = map_europe.registerZone({
+						name: 'Netherlands',
+						fileName: 'europe-6-netherlands.png',
+						animations: {
+							active: {
+								top: -400,
+								left: -938,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 128,
+								left: 248,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_netherlands = netherlands.createLevel({
+						root: netherlands.root + 'netherlands/'
+					});
+
+					var norway = map_europe.registerZone({
+						name: 'Norway',
+						fileName: 'europe-2-norway.png',
+						animations: {
+							active: {
+								top: -4,
+								left: -1140,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 0,
+								left: 270,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_norway = norway.createLevel({
+						root: norway.root + 'norway/'
+					});
+
+					var poland = map_europe.registerZone({
+						name: 'Poland',
+						fileName: 'europe-6-poland.png',
+						animations: {
+							active: {
+								top: -432,
+								left: -1352,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 116,
+								left: 306,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_poland = poland.createLevel({
+						root: poland.root + 'poland/'
+					});
+
+					var portugal = map_europe.registerZone({
+						name: 'Portugal',
+						fileName: 'europe-9-portugal.png',
+						animations: {
+							active: {
+								top: -980,
+								left: -437,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 265,
+								left: 158,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_portugal = portugal.createLevel({
+						root: portugal.root + 'portugal/'
+					});
+
+					var romania = map_europe.registerZone({
+						name: 'Romania',
+						fileName: 'europe-6-romania.png',
+						animations: {
+							active: {
+								top: -772,
+								left: -1329,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 214,
+								left: 307,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_romania = romania.createLevel({
+						root: romania.root + 'romania/'
+					});
+
+					var serbia = map_europe.registerZone({
+						name: 'Serbia',
+						fileName: 'europe-10-serbia.png',
+						animations: {
+							active: {
+								top: -832,
+								left: -1219,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 232,
+								left: 300,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_serbia = serbia.createLevel({
+						root: serbia.root + 'serbia/'
+					});
+
+					var slovakia = map_europe.registerZone({
+						name: 'Slovakia',
+						fileName: 'europe-6-slovakia.png',
+						animations: {
+							active: {
+								top: -576,
+								left: -1366,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 174,
+								left: 320,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_slovakia = slovakia.createLevel({
+						root: slovakia.root + 'slovakia/'
+					});
+
+					var spain = map_europe.registerZone({
+						name: 'Spain',
+						fileName: 'europe-9-spain.png',
+						animations: {
+							active: {
+								top: -968,
+								left: -570,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 252,
+								left: 159,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_spain = spain.createLevel({
+						root: spain.root + 'spain/'
+					});
+
+					var sweden = map_europe.registerZone({
+						name: 'Sweden',
+						fileName: 'europe-2-sweden.png',
+						animations: {
+							active: {
+								top: -68,
+								left: -1306,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 0,
+								left: 299,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_sweden = sweden.createLevel({
+						root: sweden.root + 'sweden/'
+					});
+
+					var switzerland = map_europe.registerZone({
+						name: 'Switzerland',
+						fileName: 'europe-6-switzerland.png',
+						animations: {
+							active: {
+								top: -636,
+								left: -970,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 190,
+								left: 250,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_switzerland = switzerland.createLevel({
+						root: switzerland.root + 'switzerland/'
+					});
+
+					var ukraine = map_europe.registerZone({
+						name: 'Ukraine',
+						fileName: 'europe-6-ukraine.png',
+						animations: {
+							active: {
+								top: -684,
+								left: -1499,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 176,
+								left: 317,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_ukraine = ukraine.createLevel({
+						root: ukraine.root + 'ukraine/'
+					});
+
+					var unitedkingdom = map_europe.registerZone({
+						name: 'United-kingdom',
+						fileName: 'europe-1-united-kingdom.png',
+						animations: {
+							active: {
+								top: -404,
+								left: -561,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 84,
+								left: 165,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_unitedkingdom = unitedkingdom.createLevel({
+						root: unitedkingdom.root + 'united-kingdom/'
+					});
+
 				/* Europe */
 
 				/* North America */
-				var north_america = map.registerZone({
-						name: 'North America',
-						fileName: 'north-america.png'
+					var northamerica = map.registerZone({
+						name: 'North-america',
+						fileName: 'north-america.png',
+						animations: {
+							active: {
+								top: -72,
+								left: 156,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 40,
+								left: -52,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_northamerica = northamerica.createLevel({
+						root: northamerica.root + 'north-america/'
 					});
+
+					var belize = map_northamerica.registerZone({
+						name: 'Belize',
+						fileName: 'north-america-10-belize.png',
+						animations: {
+							active: {
+								top: -404,
+								left: -20,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 255,
+								left: 34,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_belize = belize.createLevel({
+						root: belize.root + 'belize/'
+					});
+
+					var canada = map_northamerica.registerZone({
+						name: 'Canada',
+						fileName: 'north-america-2-canada.png',
+						animations: {
+							active: {
+								top: -38,
+								left: -347,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 0,
+								left: 186,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_canada = canada.createLevel({
+						root: canada.root + 'canada/'
+					});
+
+					var costarica = map_northamerica.registerZone({
+						name: 'Costa-rica',
+						fileName: 'north-america-10-costa-rica.png',
+						animations: {
+							active: {
+								top: -326,
+								left: -13,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 173,
+								left: 16,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_costarica = costarica.createLevel({
+						root: costarica.root + 'costa-rica/'
+					});
+
+					var elsalvador = map_northamerica.registerZone({
+						name: 'El-salvador',
+						fileName: 'north-america-10-el-salvador.png',
+						animations: {
+							active: {
+								top: -232,
+								left: 13,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 95,
+								left: 8,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_elsalvador = elsalvador.createLevel({
+						root: elsalvador.root + 'el-salvador/'
+					});
+
+					var guatemala = map_northamerica.registerZone({
+						name: 'Guatemala',
+						fileName: 'north-america-10-guatemala.png',
+						animations: {
+							active: {
+								top: -420,
+								left: -393,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 284,
+								left: 310,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_guatemala = guatemala.createLevel({
+						root: guatemala.root + 'guatemala/'
+					});
+
+					var honduras = map_northamerica.registerZone({
+						name: 'Honduras',
+						fileName: 'north-america-10-honduras.png',
+						animations: {
+							active: {
+								top: -426,
+								left: -420,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 288,
+								left: 318,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_honduras = honduras.createLevel({
+						root: honduras.root + 'honduras/'
+					});
+
+					var islands = map_northamerica.registerZone({
+						name: 'Islands',
+						fileName: 'north-america-10-islands.png',
+						animations: {
+							active: {
+								top: -158,
+								left: -96,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 7,
+								left: 3,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_islands = islands.createLevel({
+						root: islands.root + 'islands/'
+					});
+
+					var mexico = map_northamerica.registerZone({
+						name: 'Mexico',
+						fileName: 'north-america-10-mexico.png',
+						animations: {
+							active: {
+								top: -364,
+								left: -312,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 233,
+								left: 248,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_mexico = mexico.createLevel({
+						root: mexico.root + 'mexico/'
+					});
+
+					var nicaragua = map_northamerica.registerZone({
+						name: 'Nicaragua',
+						fileName: 'north-america-10-nicaragua.png',
+						animations: {
+							active: {
+								top: -438,
+								left: -430,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 293,
+								left: 324,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_nicaragua = nicaragua.createLevel({
+						root: nicaragua.root + 'nicaragua/'
+					});
+
+					var panama = map_northamerica.registerZone({
+						name: 'Panama',
+						fileName: 'north-america-10-panama.png',
+						animations: {
+							active: {
+								top: -464,
+								left: -464,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 308,
+								left: 335,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_panama = panama.createLevel({
+						root: panama.root + 'panama/'
+					});
+
+					var usa = map_northamerica.registerZone({
+						name: 'Usa',
+						fileName: 'north-america-1-usa.png',
+						animations: {
+							active: {
+								top: -124,
+								left: -204,
+								width: 1600,
+								height: 640,
+								opacity: 0
+							},
+							zone: {
+								top: 27,
+								left: 117,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_usa = usa.createLevel({
+						root: usa.root + 'usa/'
+					});
+				/* USA */
+
+
+					var alabama = map_usa.registerZone({
+						name: 'Alabama',
+						fileName: 'usa-7-alabama.png',
+						animations: {
+							active: {
+								top: -764,
+								left: -1582,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 203,
+								left: 363,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_alabama = alabama.createLevel({
+						root: alabama.root + 'alabama/'
+					});
+
+					var alaska = map_usa.registerZone({
+						name: 'Alaska',
+						fileName: 'usa-1-alaska.png',
+						animations: {
+							active: {
+								top: -328,
+								left: 202,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 91,
+								left: 22,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_alaska = alaska.createLevel({
+						root: alaska.root + 'alaska/'
+					});
+
+					var arizona = map_usa.registerZone({
+						name: 'Arizona',
+						fileName: 'usa-5-arizona.png',
+						animations: {
+							active: {
+								top: -660,
+								left: -496,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 170,
+								left: 152,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_arizona = arizona.createLevel({
+						root: arizona.root + 'arizona/'
+					});
+
+					var arkanzas = map_usa.registerZone({
+						name: 'Arkanzas',
+						fileName: 'usa-6-arkanzas.png',
+						animations: {
+							active: {
+								top: -684,
+								left: -1334,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 190,
+								left: 313,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_arkanzas = arkanzas.createLevel({
+						root: arkanzas.root + 'arkanzas/'
+					});
+
+					var california = map_usa.registerZone({
+						name: 'California',
+						fileName: 'usa-1-california.png',
+						animations: {
+							active: {
+								top: -460,
+								left: -239,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 94,
+								left: 99,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_california = california.createLevel({
+						root: california.root + 'california/'
+					});
+
+					var colorado = map_usa.registerZone({
+						name: 'Colorado',
+						fileName: 'usa-6-colorado.png',
+						animations: {
+							active: {
+								top: -472,
+								left: -786,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 133,
+								left: 204,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_colorado = colorado.createLevel({
+						root: colorado.root + 'colorado/'
+					});
+
+					var connecticut = map_usa.registerZone({
+						name: 'Connecticut',
+						fileName: 'usa-3-connecticut.png',
+						animations: {
+							active: {
+								top: -284,
+								left: -2065,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 103,
+								left: 461,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_connecticut = connecticut.createLevel({
+						root: connecticut.root + 'connecticut/'
+					});
+
+					var dc = map_usa.registerZone({
+						name: 'Dc',
+						fileName: 'usa-7-dc.png',
+						animations: {
+							active: {
+								top: -584,
+								left: -786,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 147,
+								left: 18,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_dc = dc.createLevel({
+						root: dc.root + 'dc/'
+					});
+
+					var delaware = map_usa.registerZone({
+						name: 'Delaware',
+						fileName: 'usa-7-delaware.png',
+						animations: {
+							active: {
+								top: -408,
+								left: -1991,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 135,
+								left: 449,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_delaware = delaware.createLevel({
+						root: delaware.root + 'delaware/'
+					});
+
+					var florida = map_usa.registerZone({
+						name: 'Florida',
+						fileName: 'usa-11-florida.png',
+						animations: {
+							active: {
+								top: -956,
+								left: -1734,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 246,
+								left: 371,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_florida = florida.createLevel({
+						root: florida.root + 'florida/'
+					});
+
+					var hawaii = map_usa.registerZone({
+						name: 'Hawaii',
+						fileName: 'usa-1-hawaii.png',
+						animations: {
+							active: {
+								top: 4,
+								left: 230,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 11,
+								left: 7,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_hawaii = hawaii.createLevel({
+						root: hawaii.root + 'hawaii/'
+					});
+
+					var idaho = map_usa.registerZone({
+						name: 'Idaho',
+						fileName: 'usa-1-idaho.png',
+						animations: {
+							active: {
+								top: -140,
+								left: -496,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 32,
+								left: 154,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_idaho = idaho.createLevel({
+						root: idaho.root + 'idaho/'
+					});
+
+					var illinois = map_usa.registerZone({
+						name: 'Illinois',
+						fileName: 'usa-6-illinois.png',
+						animations: {
+							active: {
+								top: -448,
+								left: -1430,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 121,
+								left: 335,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_illinois = illinois.createLevel({
+						root: illinois.root + 'illinois/'
+					});
+
+					var indiana = map_usa.registerZone({
+						name: 'Indiana',
+						fileName: 'usa-6-indiana.png',
+						animations: {
+							active: {
+								top: -440,
+								left: -1559,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 126,
+								left: 362,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_indiana = indiana.createLevel({
+						root: indiana.root + 'indiana/'
+					});
+
+					var iowa = map_usa.registerZone({
+						name: 'Iowa',
+						fileName: 'usa-2-iowa.png',
+						animations: {
+							active: {
+								top: -356,
+								left: -1274,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 111,
+								left: 298,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_iowa = iowa.createLevel({
+						root: iowa.root + 'iowa/'
+					});
+
+					var kansas = map_usa.registerZone({
+						name: 'Kansas',
+						fileName: 'usa-6-kansas.png',
+						animations: {
+							active: {
+								top: -508,
+								left: -1081,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 149,
+								left: 257,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_kansas = kansas.createLevel({
+						root: kansas.root + 'kansas/'
+					});
+
+					var kentucky = map_usa.registerZone({
+						name: 'Kentucky',
+						fileName: 'usa-7-kentucky.png',
+						animations: {
+							active: {
+								top: -528,
+								left: -1596,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 156,
+								left: 353,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_kentucky = kentucky.createLevel({
+						root: kentucky.root + 'kentucky/'
+					});
+
+					var louisiana = map_usa.registerZone({
+						name: 'Louisiana',
+						fileName: 'usa-10-louisiana.png',
+						animations: {
+							active: {
+								top: -848,
+								left: -1375,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 230,
+								left: 318,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_louisiana = louisiana.createLevel({
+						root: louisiana.root + 'louisiana/'
+					});
+
+					var maine = map_usa.registerZone({
+						name: 'Maine',
+						fileName: 'usa-3-maine.png',
+						animations: {
+							active: {
+								top: -92,
+								left: -2152,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 38,
+								left: 469,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_maine = maine.createLevel({
+						root: maine.root + 'maine/'
+					});
+
+					var maryland = map_usa.registerZone({
+						name: 'Maryland',
+						fileName: 'usa-7-maryland.png',
+						animations: {
+							active: {
+								top: -424,
+								left: -1918,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 136,
+								left: 423,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_maryland = maryland.createLevel({
+						root: maryland.root + 'maryland/'
+					});
+
+					var massachusetts = map_usa.registerZone({
+						name: 'Massachusetts',
+						fileName: 'usa-3-massachusetts.png',
+						animations: {
+							active: {
+								top: -240,
+								left: -2097,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 92,
+								left: 460,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_massachusetts = massachusetts.createLevel({
+						root: massachusetts.root + 'massachusetts/'
+					});
+
+					var michigan = map_usa.registerZone({
+						name: 'Michigan',
+						fileName: 'usa-2-michigan.png',
+						animations: {
+							active: {
+								top: -224,
+								left: -1527,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 64,
+								left: 338,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_michigan = michigan.createLevel({
+						root: michigan.root + 'michigan/'
+					});
+
+					var minnesota = map_usa.registerZone({
+						name: 'Minnesota',
+						fileName: 'usa-2-minnesota.png',
+						animations: {
+							active: {
+								top: -160,
+								left: -1260,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 49,
+								left: 295,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_minnesota = minnesota.createLevel({
+						root: minnesota.root + 'minnesota/'
+					});
+
+					var mississippi = map_usa.registerZone({
+						name: 'Mississippi',
+						fileName: 'usa-6-mississippi.png',
+						animations: {
+							active: {
+								top: -772,
+								left: -1439,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 205,
+								left: 338,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_mississippi = mississippi.createLevel({
+						root: mississippi.root + 'mississippi/'
+					});
+
+					var missouri = map_usa.registerZone({
+						name: 'Missouri',
+						fileName: 'usa-6-missouri.png',
+						animations: {
+							active: {
+								top: -520,
+								left: -1320,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 144,
+								left: 304,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_missouri = missouri.createLevel({
+						root: missouri.root + 'missouri/'
+					});
+
+					var montana = map_usa.registerZone({
+						name: 'Montana',
+						fileName: 'usa-1-montana.png',
+						animations: {
+							active: {
+								top: -92,
+								left: -685,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 34,
+								left: 173,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_montana = montana.createLevel({
+						root: montana.root + 'montana/'
+					});
+
+					var nebraska = map_usa.registerZone({
+						name: 'Nebraska',
+						fileName: 'usa-6-nebraska.png',
+						animations: {
+							active: {
+								top: -372,
+								left: -1030,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 115,
+								left: 244,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_nebraska = nebraska.createLevel({
+						root: nebraska.root + 'nebraska/'
+					});
+
+					var nevada = map_usa.registerZone({
+						name: 'Nevada',
+						fileName: 'usa-1-nevada.png',
+						animations: {
+							active: {
+								top: -432,
+								left: -358,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 104,
+								left: 126,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_nevada = nevada.createLevel({
+						root: nevada.root + 'nevada/'
+					});
+
+					var newhampshire = map_usa.registerZone({
+						name: 'New-hampshire',
+						fileName: 'usa-3-new-hampshire.png',
+						animations: {
+							active: {
+								top: -164,
+								left: -2083,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 66,
+								left: 465,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_newhampshire = newhampshire.createLevel({
+						root: newhampshire.root + 'new-hampshire/'
+					});
+
+					var newjersey = map_usa.registerZone({
+						name: 'New-jersey',
+						fileName: 'usa-7-new-jersey.png',
+						animations: {
+							active: {
+								top: -360,
+								left: -2005,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 116,
+								left: 452,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_newjersey = newjersey.createLevel({
+						root: newjersey.root + 'new-jersey/'
+					});
+
+					var newmexico = map_usa.registerZone({
+						name: 'New-mexico',
+						fileName: 'usa-6-new-mexico.png',
+						animations: {
+							active: {
+								top: -680,
+								left: -740,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 178,
+								left: 196,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_newmexico = newmexico.createLevel({
+						root: newmexico.root + 'new-mexico/'
+					});
+
+					var newyork = map_usa.registerZone({
+						name: 'New-york',
+						fileName: 'usa-3-new-york.png',
+						animations: {
+							active: {
+								top: -232,
+								left: -1945,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 74,
+								left: 417,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_newyork = newyork.createLevel({
+						root: newyork.root + 'new-york/'
+					});
+
+					var northcarolina = map_usa.registerZone({
+						name: 'North-carolina',
+						fileName: 'usa-7-north-carolina.png',
+						animations: {
+							active: {
+								top: -596,
+								left: -1840,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 172,
+								left: 393,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_northcarolina = northcarolina.createLevel({
+						root: northcarolina.root + 'north-carolina/'
+					});
+
+					var northdakota = map_usa.registerZone({
+						name: 'North-dakota',
+						fileName: 'usa-2-north-dakota.png',
+						animations: {
+							active: {
+								top: -104,
+								left: -1016,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 48,
+								left: 249,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_northdakota = northdakota.createLevel({
+						root: northdakota.root + 'north-dakota/'
+					});
+
+					var ohio = map_usa.registerZone({
+						name: 'Ohio',
+						fileName: 'usa-7-ohio.png',
+						animations: {
+							active: {
+								top: -400,
+								left: -1692,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 119,
+								left: 382,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_ohio = ohio.createLevel({
+						root: ohio.root + 'ohio/'
+					});
+
+					var oklahoma = map_usa.registerZone({
+						name: 'Oklahoma',
+						fileName: 'usa-6-oklahoma.png',
+						animations: {
+							active: {
+								top: -652,
+								left: -1062,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 183,
+								left: 249,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_oklahoma = oklahoma.createLevel({
+						root: oklahoma.root + 'oklahoma/'
+					});
+
+					var oregon = map_usa.registerZone({
+						name: 'Oregon',
+						fileName: 'usa-1-oregon.png',
+						animations: {
+							active: {
+								top: -156,
+								left: -266,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 49,
+								left: 105,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_oregon = oregon.createLevel({
+						root: oregon.root + 'oregon/'
+					});
+
+					var pennsylvania = map_usa.registerZone({
+						name: 'Pennsylvania',
+						fileName: 'usa-3-pennsylvania.png',
+						animations: {
+							active: {
+								top: -348,
+								left: -1886,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 110,
+								left: 412,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_pennsylvania = pennsylvania.createLevel({
+						root: pennsylvania.root + 'pennsylvania/'
+					});
+
+					var rhodeisland = map_usa.registerZone({
+						name: 'Rhode-island',
+						fileName: 'rhode-island.png',
+						animations: {
+							active: {
+								top: -676,
+								left: -897,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 102,
+								left: 24,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_rhodeisland = rhodeisland.createLevel({
+						root: rhodeisland.root + 'rhode-island/'
+					});
+
+					var southcarolina = map_usa.registerZone({
+						name: 'South-carolina',
+						fileName: 'usa-7-south-carolina.png',
+						animations: {
+							active: {
+								top: -692,
+								left: -1812,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 196,
+								left: 402,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_southcarolina = southcarolina.createLevel({
+						root: southcarolina.root + 'south-carolina/'
+					});
+
+					var southdakota = map_usa.registerZone({
+						name: 'South-dakota',
+						fileName: 'usa-2-south-dakota.png',
+						animations: {
+							active: {
+								top: -248,
+								left: -1012,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 82,
+								left: 246,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_southdakota = southdakota.createLevel({
+						root: southdakota.root + 'south-dakota/'
+					});
+
+					var stategeorgia = map_usa.registerZone({
+						name: 'State-georgia',
+						fileName: 'usa-7-state-georgia.png',
+						animations: {
+							active: {
+								top: -744,
+								left: -1725,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 201,
+								left: 384,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_stategeorgia = stategeorgia.createLevel({
+						root: stategeorgia.root + 'state-georgia/'
+					});
+
+					var tennessee = map_usa.registerZone({
+						name: 'Tennessee',
+						fileName: 'usa-7-tennessee.png',
+						animations: {
+							active: {
+								top: -612,
+								left: -1591,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 180,
+								left: 347,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_tennessee = tennessee.createLevel({
+						root: tennessee.root + 'tennessee/'
+					});
+
+					var texas = map_usa.registerZone({
+						name: 'Texas',
+						fileName: 'usa-6-texas.png',
+						animations: {
+							active: {
+								top: -840,
+								left: -993,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 189,
+								left: 216,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_texas = texas.createLevel({
+						root: texas.root + 'texas/'
+					});
+
+					var utah = map_usa.registerZone({
+						name: 'Utah',
+						fileName: 'usa-5-utah.png',
+						animations: {
+							active: {
+								top: -424,
+								left: -552,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 115,
+								left: 166,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_utah = utah.createLevel({
+						root: utah.root + 'utah/'
+					});
+
+					var vermont = map_usa.registerZone({
+						name: 'Vermont',
+						fileName: 'usa-3-vermont.png',
+						animations: {
+							active: {
+								top: -176,
+								left: -2033,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 70,
+								left: 454,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_vermont = vermont.createLevel({
+						root: vermont.root + 'vermont/'
+					});
+
+					var virginia = map_usa.registerZone({
+						name: 'Virginia',
+						fileName: 'usa-7-new-virginia.png',
+						animations: {
+							active: {
+								top: -492,
+								left: -1844,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 144,
+								left: 397,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_virginia = virginia.createLevel({
+						root: virginia.root + 'virginia/'
+					});
+
+					var washington = map_usa.registerZone({
+						name: 'Washington',
+						fileName: 'usa-1-washington.png',
+						animations: {
+							active: {
+								top: -12,
+								left: -312,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 21,
+								left: 118,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_washington = washington.createLevel({
+						root: washington.root + 'washington/'
+					});
+
+					var westvirginia = map_usa.registerZone({
+						name: 'West-virginia',
+						fileName: 'usa-7-west-virginia.png',
+						animations: {
+							active: {
+								top: -456,
+								left: -1807,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 134,
+								left: 403,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_westvirginia = westvirginia.createLevel({
+						root: westvirginia.root + 'west-virginia/'
+					});
+
+					var wisconsin = map_usa.registerZone({
+						name: 'Wisconsin',
+						fileName: 'usa-2-wisconsin.png',
+						animations: {
+							active: {
+								top: -228,
+								left: -1389,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 72,
+								left: 323,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_wisconsin = wisconsin.createLevel({
+						root: wisconsin.root + 'wisconsin/'
+					});
+
+					var wyoming = map_usa.registerZone({
+						name: 'Wyoming',
+						fileName: 'usa-2-wyoming.png',
+						animations: {
+							active: {
+								top: -284,
+								left: -731,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 86,
+								left: 194,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_wyoming = wyoming.createLevel({
+						root: wyoming.root + 'wyoming/'
+					});
+				/* //USA */
 				/* North America */
 
 				/* South America */
-				var south_america = map.registerZone({
-						name: 'South America',
-						fileName: 'south-america.png'
+				var southamerica = map.registerZone({
+					name: 'South-america',
+					fileName: 'south-america.png',
+					animations: {
+						active: {
+							top: -362,
+							left: -18,
+							width: 1600,
+							height: 640,
+							opacity: 0
+						},
+						zone: {
+							top: 194,
+							left: 14,
+							width: 400,
+							height: 160
+						}
+					}
+				}),
+				map_southamerica = southamerica.createLevel({
+					root: southamerica.root + 'south-america/'
+				});
+
+					var argentina = map_southamerica.registerZone({
+						name: 'Argentina',
+						fileName: 'south-america-6-argentina.png',
+						animations: {
+							active: {
+								top: -724,
+								left: -1071,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 140,
+								left: 252,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_argentina = argentina.createLevel({
+						root: argentina.root + 'argentina/'
+					});
+
+					var bolivia = map_southamerica.registerZone({
+						name: 'Bolivia',
+						fileName: 'south-america-2-bolivia.png',
+						animations: {
+							active: {
+								top: -316,
+								left: -1071,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 93,
+								left: 265,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_bolivia = bolivia.createLevel({
+						root: bolivia.root + 'bolivia/'
+					});
+
+					var brazil = map_southamerica.registerZone({
+						name: 'Brazil',
+						fileName: 'south-america-2-brazil.png',
+						animations: {
+							active: {
+								top: -288,
+								left: -1228,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 35,
+								left: 181,
+								width: 400,
+								height: 160
+							}
+						}
+					}),
+					map_brazil = brazil.createLevel({
+						root: brazil.root + 'brazil/'
+					});
+
+					var chile = map_southamerica.registerZone({
+						name: 'Chile',
+						fileName: 'south-america-6-chile.png',
+						animations: {
+							active: {
+								top: -700,
+								left: -943,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 123,
+								left: 246,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_chile = chile.createLevel({
+						root: chile.root + 'chile/'
+					});
+
+					var colombia = map_southamerica.registerZone({
+						name: 'Colombia',
+						fileName: 'south-america-2-colombia.png',
+						animations: {
+							active: {
+								top: -8,
+								left: -910,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 11,
+								left: 235,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_colombia = colombia.createLevel({
+						root: colombia.root + 'colombia/'
+					});
+
+					var ecuador = map_southamerica.registerZone({
+						name: 'Ecuador',
+						fileName: 'south-america-2-ecuador.png',
+						animations: {
+							active: {
+								top: -96,
+								left: -823,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 52,
+								left: 229,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_ecuador = ecuador.createLevel({
+						root: ecuador.root + 'ecuador/'
+					});
+
+					var frenchguiana = map_southamerica.registerZone({
+						name: 'French-guiana',
+						fileName: 'south-america-2-french-guiana.png',
+						animations: {
+							active: {
+								top: -12,
+								left: -1251,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 36,
+								left: 312,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_frenchguiana = frenchguiana.createLevel({
+						root: frenchguiana.root + 'french-guiana/'
+					});
+
+					var guyana = map_southamerica.registerZone({
+						name: 'Guyana',
+						fileName: 'south-america-2-guyana.png',
+						animations: {
+							active: {
+								top: 4,
+								left: -1154,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 26,
+								left: 291,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_guyana = guyana.createLevel({
+						root: guyana.root + 'guyana/'
+					});
+
+					var paraguay = map_southamerica.registerZone({
+						name: 'Paraguay',
+						fileName: 'south-america-6-paraguay.png',
+						animations: {
+							active: {
+								top: -428,
+								left: -1159,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 130,
+								left: 287,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_paraguay = paraguay.createLevel({
+						root: paraguay.root + 'paraguay/'
+					});
+
+					var peru = map_southamerica.registerZone({
+						name: 'Peru',
+						fileName: 'south-america-2-peru.png',
+						animations: {
+							active: {
+								top: -208,
+								left: -878,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 58,
+								left: 228,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_peru = peru.createLevel({
+						root: peru.root + 'peru/'
+					});
+
+					var surinam = map_southamerica.registerZone({
+						name: 'Surinam',
+						fileName: 'south-america-2-surinam.png',
+						animations: {
+							active: {
+								top: -12,
+								left: -1200,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 35,
+								left: 301,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_surinam = surinam.createLevel({
+						root: surinam.root + 'surinam/'
+					});
+
+					var uruguay = map_southamerica.registerZone({
+						name: 'Uruguay',
+						fileName: 'south-america-6-uruguay.png',
+						animations: {
+							active: {
+								top: -580,
+								left: -1205,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 174,
+								left: 300,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_uruguay = uruguay.createLevel({
+						root: uruguay.root + 'uruguay/'
+					});
+
+					var venezuela = map_southamerica.registerZone({
+						name: 'Venezuela',
+						fileName: 'south-america-2-venezuela.png',
+						animations: {
+							active: {
+								top: 28,
+								left: -1021,
+								width: 3200,
+								height: 1280,
+								opacity: 0
+							},
+							zone: {
+								top: 12,
+								left: 253,
+								width: 200,
+								height: 80
+							}
+						}
+					}),
+					map_venezuela = venezuela.createLevel({
+						root: venezuela.root + 'venezuela/'
 					});
 				/* South America */
 
@@ -1168,12 +7282,7 @@
 	<script type="text/template" id="canvas-map">
 		<div class="b-map">
 			<div class="b-map-content"></div>
-			<div class="b-map-gmap"></div>
 			<i class="b-map-preloader"></i>
-			<i class="b-map-gmap-zoom">
-				<span class="b-map-gmap-zoom_in"></span>
-				<span class="b-map-gmap-zoom_out"></span>
-			</i>
 		</div>
 	</script>
 	<!-- Templates -->

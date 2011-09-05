@@ -11,19 +11,12 @@ var Map = function() {
 
 Map.prototype = {
 	map: {},
-	gmap: null,
-	gmapGeocoder: null,
 	mapEl: null,
 	tpl: {
 		map: {
 			root: null,
 			mapImg: null,
-			zones: [],
-			gmapShift: {
-				lat: 0,
-				lng: 0
-			},
-			gmapZoom: 0
+			zones: []
 		},
 		zone: {
 			active: false,
@@ -65,6 +58,9 @@ Map.prototype = {
 			},
 			onOut: function(callback) {
 				this.zone.animation && clearTimeout(this.zone.animation);
+				
+				console.log(this.zone, this.zone.domEl)
+				
 				this.zone.domEl
 					.fadeOut('fast', function() {
 						if (typeof(callback) === 'function') {
@@ -106,10 +102,14 @@ Map.prototype = {
 	loadedImgs: 0,
 	currentLevel: [0],
 	currentLevelRoot: null,
-	canvases: [],
+	canvases: {},
+	loadQueue: {
+		length: 0
+	},
 
 	createLevel: function(params) {
-		var mapImg = new Image();
+		var mapImg = new Image(),
+			rootLevel = this.context.getLevelRoot();
 
 		$.extend(true, this.zone, this.context.tpl.map);
 		$.extend(true, this.zone, params);
@@ -117,7 +117,9 @@ Map.prototype = {
 		mapImg.className = 'b-map-content_map';
 		this.zone.mapImg = mapImg;
 
-		this.context.loadImg(mapImg, params.root + '_map.png');
+		if (rootLevel.root == params.root) {
+			this.context.loadImg(mapImg, params.root + '_map.png');
+		}
 		return {
 			registerZone: this.context.registerZone.bind({
 				context: this.context,
@@ -145,22 +147,42 @@ Map.prototype = {
 		}
 	},
 
-	loadImg: function(target, src, customCallback, customEvent) {
+	loadImg: function(target, src, params) {
+		params || (params = {});
+		params.customEvent = params.customEvent ? 'canvmap.' + params.customEvent : 'canvmap.ready';
+
+		if (!this.loadQueue[params.customEvent]) {
+			this.loadQueue[params.customEvent] = {
+				totalImgs: 0,
+				loadedImgs: 0
+			};
+			this.loadQueue.length++;
+		}
 		this.ready = false;
-		this.totalImgs++;
+		this.loadQueue[params.customEvent].totalImgs++;
+		
 		$(target)
 			.bind('load', function(event) {
-				this.loadedImgs++;
+				this.queue.loadedImgs++;
 
-				if (this.totalImgs && this.totalImgs == this.loadedImgs) {
-					this.ready = true;
-					AWAD.Observatory.trigger(customEvent ? 'canvmap.' + customEvent : 'canvmap.ready');
+				if (typeof(this.params.customCallback) === 'function') {
+					this.params.customCallback.apply(this.context, [event].concat(this.params.callbackParams || []));
 				}
 
-				if (typeof(customCallback) === 'function') {
-					customCallback(event);
+				if (this.queue.totalImgs && this.queue.totalImgs == this.queue.loadedImgs) {
+					AWAD.Observatory.trigger(this.params.customEvent, this.params.eventParams || []);
+					delete this.context.loadQueue[this.params.customEvent];
+					this.context.loadQueue.length--;
+
+					if (!this.context.loadQueue.length) {
+						this.context.ready = true;
+					}
 				}
-			}.bind(this))
+			}.bind({
+				context: this,
+				queue: this.loadQueue[params.customEvent],
+				params: params
+			}))
 			.attr('src', src);
 	},
 
@@ -182,6 +204,11 @@ Map.prototype = {
 					.removeClass('b-loading_map');
 				mapContent.fadeIn();
 				this.setListeners(mapContent);
+			}.bind(this))
+			.bind('canvmap.subzones.loaded', function(event, root) {
+				if (root.zones) {
+					this.createCanvasesList(root.zones, root.mapImg);
+				}
 			}.bind(this));
 	},
 
@@ -191,10 +218,7 @@ Map.prototype = {
 		this.setLevelRoot();
 		root = this.currentLevelRoot;
 		container.append(root.mapImg);
-
-		if (root.zones) {
-			this.createCanvasesList(root.zones, root.mapImg);
-		}
+		this.loadSubZones(root);
 	},
 
 	setLevelRoot: function() {
@@ -215,8 +239,30 @@ Map.prototype = {
 		}
 	},
 
+	loadSubZones: function(level) {
+		var isNothingToLoad = true;
+
+		if (level.zones.length) {
+			$(level.zones).each(function(i, zone) {
+				if (!zone.mapImg.getAttribute('src')) {
+					this.mapEl.addClass('b-loading_map');
+					this.loadImg(zone.mapImg, zone.root + '_map.png', {
+						customEvent: 'subzones.loaded',
+						eventParams: [level]
+					});
+					isNothingToLoad = false;
+				}
+			}.bind(this));
+		}
+
+		if (isNothingToLoad) {
+			AWAD.Observatory.trigger('canvmap.subzones.loaded', [level]);
+		}
+	},
+
 	createCanvasesList: function(list, map) {
-		var hasCanvases = !!this.canvases[this.currentLevel.length - 1],
+		var levelRoot = this.currentLevelRoot.root,
+			hasCanvases = !!this.canvases[levelRoot],
 			canvases = [];
 
 		map = $(map);
@@ -227,16 +273,20 @@ Map.prototype = {
 					image = $('<img>').appendTo(map.parent());
 
 				this.mapEl.addClass('b-loading_map');
-	
+
 				canvas.width = map[0].width;
 				canvas.height = map[0].height;
 				image.addClass('b-map_zones');
 				item.domEl = image;
-	
-				this.loadImg(image, item.fileName, function(event) {
-					ctx.drawImage(event.target, 0, 0);
-				}, 'rendered');
-	
+
+				this.loadImg(image, item.fileName, {
+					customCallback: function(event, ctx) {
+						ctx.drawImage(event.target, 0, 0);
+					},
+					callbackParams: [ctx],
+					customEvent: 'rendered'
+				});
+
 				canvases.push(ctx);
 			} else {
 				map
@@ -246,7 +296,7 @@ Map.prototype = {
 		}.bind(this));
 
 		if (!hasCanvases) {
-			this.canvases[this.currentLevel.length - 1] = canvases;
+			this.canvases[levelRoot] = canvases;
 		}
 
 		if (!list.length || hasCanvases) {
@@ -260,6 +310,8 @@ Map.prototype = {
 
 	setListeners: function(mapEl) {
 		var mapPos = this.findPos(mapEl[0]),
+			levelRoot = this.currentLevelRoot.root,
+			levelCanvasList = this.canvases[levelRoot],
 			hasActiveZone = false;
 
 		mapEl
@@ -267,7 +319,7 @@ Map.prototype = {
 			.bind('mousemove.canvmap click.canvmap', function(event) {
 				var index = null;
 
-				$(this.canvases[this.currentLevel.length - 1]).each(function(i, ctx) {
+				$(levelCanvasList).each(function(i, ctx) {
 					var pixel = ctx.getImageData(event.pageX - mapPos.x, event.pageY - mapPos.y, 1, 1).data,
 						zone = this.currentLevelRoot.zones[i];
 
@@ -300,61 +352,9 @@ Map.prototype = {
 				}
 			}.bind(this));
 
-		if (!this.canvases[this.currentLevel.length - 1].length) {
-			//this.loadGMap();
+		if (levelCanvasList && !levelCanvasList.length) {
+			// Action on closest zoom
 		}
-	},
-
-	loadGMap: function() {
-		var zone = this.currentLevelRoot,
-			gmapContainer = $('.b-map-gmap'),
-			gmapGeocoder = this.gmapGeocoder = new google.maps.Geocoder(),
-			gmapZoom = $('.b-map-gmap-zoom', this.mapEl),
-			gmap;
-
-		this.mapEl.addClass('b-loading_map');
-		gmapGeocoder.geocode({
-			address: zone.name
-		}, function(results, status) {
-			this.mapEl.removeClass('b-loading_map');
-
-			if (status == google.maps.GeocoderStatus.OK) {
-				var location = results[0].geometry.location
-					centerLatLng = new google.maps.LatLng(location.lat() + zone.gmapShift.lat, location.lng() + zone.gmapShift.lng);
-
-				gmapContainer.fadeIn('fast');
-				gmap = this.gmap = new google.maps.Map(gmapContainer[0], {
-					zoom: zone.gmapZoom,
-					minZoom: zone.gmapZoom,
-					disableDefaultUI: true,
-					disableDoubleClickZoom: true,
-					scrollwheel: false,
-					center: centerLatLng,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				});
-				gmapZoom
-					.show()
-					.undelegate()
-					.delegate('.b-map-gmap-zoom_in', 'click', function(event) {
-						gmap.setZoom(gmap.getZoom() + 1);
-						return false;
-					})
-					.delegate('.b-map-gmap-zoom_out', 'click', function(event) {
-						var prevLvl = gmap.getZoom();
-
-						gmap.setZoom(gmap.getZoom() - 1);
-
-						if (gmap.getZoom() == prevLvl) {
-							gmap.setCenter(centerLatLng);
-							gmapZoom.hide();
-							gmapContainer.fadeOut('fast', function() {
-								this.zoomOut();
-							}.bind(this));
-						}
-						return false;
-					}.bind(this))
-			}
-		}.bind(this));
 	},
 
 	zoomOut: function() {
