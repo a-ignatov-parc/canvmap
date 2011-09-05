@@ -58,10 +58,8 @@ Map.prototype = {
 			},
 			onOut: function(callback) {
 				this.zone.animation && clearTimeout(this.zone.animation);
-				
-				console.log(this.zone, this.zone.domEl)
-				
 				this.zone.domEl
+					.stop(true, true)
 					.fadeOut('fast', function() {
 						if (typeof(callback) === 'function') {
 							callback();
@@ -317,38 +315,40 @@ Map.prototype = {
 		mapEl
 			.unbind()
 			.bind('mousemove.canvmap click.canvmap', function(event) {
-				var index = null;
+				if (this.ready) {
+					var index = null;
 
-				$(levelCanvasList).each(function(i, ctx) {
-					var pixel = ctx.getImageData(event.pageX - mapPos.x, event.pageY - mapPos.y, 1, 1).data,
-						zone = this.currentLevelRoot.zones[i];
+					$(levelCanvasList).each(function(i, ctx) {
+						var pixel = ctx.getImageData(event.pageX - mapPos.x, event.pageY - mapPos.y, 1, 1).data,
+							zone = this.currentLevelRoot.zones[i];
 
-					if (pixel[0] + pixel[1] + pixel[2] + pixel[3] > 0 && zone) {
-						if (!zone.active) {
-							index = zone.index;
-							this.checkZone(index);
-							zone.onOver.call({
-								context: this,
-								zone: zone
-							});
-						} else if (event.type == 'click') {
-							zone.onClick.call({
-								context: this,
-								zone: zone
-							});
+						if (pixel[0] + pixel[1] + pixel[2] + pixel[3] > 0 && zone) {
+							if (!zone.active) {
+								index = zone.index;
+								this.checkZone(index);
+								zone.onOver.call({
+									context: this,
+									zone: zone
+								});
+							} else if (event.type == 'click') {
+								zone.onClick.call({
+									context: this,
+									zone: zone
+								});
+							}
+							zone.active = true;
+							hasActiveZone = true;
 						}
-						zone.active = true;
-						hasActiveZone = true;
-					}
-				}.bind(this));
+					}.bind(this));
 
-				if (hasActiveZone) {
-					hasActiveZone = false;
-				} else {
-					if (event.type == 'click') {
-						this.zoomOut();
+					if (hasActiveZone) {
+						hasActiveZone = false;
+					} else {
+						if (event.type == 'click') {
+							this.zoomOut();
+						}
+						this.checkZone();
 					}
-					this.checkZone();
 				}
 			}.bind(this));
 
